@@ -1,0 +1,29 @@
+# Site settings
+title: Slim Pickins Jekyll Theme
+email: 
+
+description: > # this means to ignore newlines until "baseurl:"
+  Witty description here.
+  
+baseurl: ""
+url: ""
+
+# Exclude our ruby stuff
+exclude: [.bundle, bin, vendor, Gemfile, Gemfile.lock, Rakefile, s3_website.yml, .last_optimized]
+
+# Google Analytics
+google_universal_analytics: 
+google_universal_analytics_cookiedomain: auto
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+destination: _site
+
+# Compress our Css
+sass:
+    style: :compressed
+
+permalink: /blog/:year/:title

@@ -1,0 +1,12 @@
+- title: "Home"
+  href: "/"
+
+- title: "Blog"
+  href: "/blog/"
+
+- title: "Misc"
+  subcategories:
+    - subtitle: "Example"
+      subhref: "#"
+    - subtitle: "Example2"
+      subhref: "#"
