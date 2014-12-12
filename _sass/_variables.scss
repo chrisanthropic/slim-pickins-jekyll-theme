@@ -3,7 +3,10 @@ $primary-color: #272727;
 $secondary-color: #aaa;
 $complimentary-color: #fff;
 $background-color: #fdfdfd;
-$text-color: #222;
+$body-font-color: #222;
+$link-color: lighten($body-font-color, 25%);
+$link-hover-color: $body-font-color;
+$link-visited-color: darken($complimentary-color, 25%);
 
 // Text
 $base-font-family: Helvetica, Arial, sans-serif;

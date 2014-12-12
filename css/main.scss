@@ -4,10 +4,6 @@
 
 @charset "utf-8";
 
-// Zurb Foundation Stuff
-@import "foundation/components/grid";
-@import "foundation/components/visibility";
-
 // Variables
 @import "variables";
 
@@ -17,5 +13,9 @@
 // Core Layout
 @import "base";
 @import "layout";
+
+// Zurb Foundation Stuff
+@import "foundation/components/grid";
+@import "foundation/components/visibility";
 
 // Misc.

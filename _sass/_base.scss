@@ -8,23 +8,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
-/**
- * Basic styling
- */
-body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
-    -webkit-text-size-adjust: 100%;
-}
-
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -88,15 +71,15 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: darken($complimentary-color, 35%);
+    color: $link-color;
     text-decoration: none;
 
     &:visited {
-        color: darken($complimentary-color, 90%);
+        color: $link-visited-color;
     }
 
     &:hover {
-        color: darken($text-color, 25%);
+        color: link-hover-color;
         text-decoration: underline;
     }
 }
