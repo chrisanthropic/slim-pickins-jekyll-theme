@@ -15,33 +15,33 @@ Slim Pickins is what I consider to be a minimal 'core' theme with everything I n
 ### SASS
 Includes the following variables:
 
-** Base Colors **
+**Base Colors**
 * $primary-color
 * $secondary-color
 * $complimentary-color
 * $background-color
 * $text-color
 
-** Text **
+**Text**
 * $base-font-family
 * $base-font-size
 * $small-font-size
 * $base-line-height
 
 
-** Primary Navbar Settings **
+**Primary Navbar Settings**
 * $navbar-color
 * $navbar-text-color
 * $navbar-hover-color
 
-** Socials Navbar Settings **
+**Socials Navbar Settings**
 * $socials-text-color
 * $socials-hover-color
 
-** Utility **
+**Utility**
 * $spacing-unit
 
-** Footer **
+**Footer**
 * $footer-height
 * $footer-color
 
