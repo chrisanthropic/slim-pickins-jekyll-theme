@@ -4,10 +4,10 @@
     <title>Slim Pickins Jekyll Theme</title>
     <description>Witty description here.
 </description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 11 Dec 2014 17:55:36 -0800</pubDate>
-    <lastBuildDate>Thu, 11 Dec 2014 17:55:36 -0800</lastBuildDate>
+    <link>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/</link>
+    <atom:link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 11 Dec 2014 18:01:39 -0800</pubDate>
+    <lastBuildDate>Thu, 11 Dec 2014 18:01:39 -0800</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
   </channel>
