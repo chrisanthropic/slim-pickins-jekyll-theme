@@ -172,7 +172,7 @@ end
 
 # Ping Google and Yahoo to let them know you updated your site
 
-site = "www.chrisanthropic.com"
+site = "www.YOUR-URL.com"
 
 desc 'Notify Google of the new sitemap'
 task :sitemapgoogle do
