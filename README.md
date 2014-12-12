@@ -82,7 +82,7 @@ These 3 tasks have been bundled into custom build and deploy tasks
 ## Basic Use
 For now theming on Jekyll sucks in that it's not super easy to change themes. For now it's best to start fresh or install the them and then transfer over any old files (posts, images, etc) from your old site.
 
-* Git clone this repo, cd into the directory and run `bundle install` to install the required dependencies.
+* Git clone this repo, cd into the directory and run `bundle install --binstubs --path=vendor` to install the required dependencies.
 * Edit your config.yml file
   * Change the title and description at a minimum.
 * Update your navigation 
