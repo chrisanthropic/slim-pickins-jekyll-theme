@@ -4,9 +4,8 @@ email:
 
 description: > # this means to ignore newlines until "baseurl:"
   Witty description here.
-  
-baseurl: ""
-url: ""
+
+url: //chrisanthropic.github.io/slim-pickins-jekyll-theme
 
 # Exclude our ruby stuff
 exclude: [.bundle, bin, vendor, Gemfile, Gemfile.lock, Rakefile, s3_website.yml, .last_optimized]
@@ -23,7 +22,7 @@ kramdown:
 destination: _site
 
 # Compress our Css
-sass:
-    style: :compressed
+#sass:
+#    style: :compressed
 
 permalink: /blog/:year/:title
