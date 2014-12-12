@@ -1,6 +1,8 @@
 slim-pickins-jekyll-theme
 =============
 
+Live Demo [HERE](http://chrisanthropic.github.io/slim-pickins-jekyll-theme/)
+
 Slim Pickins is what I consider to be a minimal 'core' theme with everything I need to quickly develop new themes for Jekyll.
 
 ## Basic features include:
