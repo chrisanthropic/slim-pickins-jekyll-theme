@@ -1,12 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-_data-to-build-jekyll-navigation</loc>
+      
+        <lastmod>2014-12-09</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
   
     
     <url>
-      <loc>/404.html</loc>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/integrating-compass-and-jekyll-without-plugins</loc>
       
-        <lastmod>2014-12-11T18:01:39-08:00</lastmod>
+        <lastmod>2014-12-09</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/integrating-the-foundation-zurb-grid-with-jekyll</loc>
+      
+        <lastmod>2014-12-08</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/an-s3-policy-to-block-semalt-referral-traffic</loc>
+      
+        <lastmod>2014-12-05</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3_website</loc>
+      
+        <lastmod>2014-12-05</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/rakefile-minimize-assets-and-optimize-images</loc>
+      
+        <lastmod>2014-12-04</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/mail-forwarding-with-mailgun-and-cloudflare</loc>
+      
+        <lastmod>2014-12-03</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/moving-from-github-pages-to-s3</loc>
+      
+        <lastmod>2014-12-03</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/add-sitemap-xml-to-jekyll</loc>
+      
+        <lastmod>2014-12-03</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/adding-google-analytics-to-octopress-3-0</loc>
+      
+        <lastmod>2014-12-02T19:38:10-08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/octopress-blog-from-a-subdirectory</loc>
+      
+        <lastmod>2014-11-27T20:46:50-08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/basic-customization</loc>
+      
+        <lastmod>2014-11-24T16:44:01-08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/installing-octopress-3-0-from-scratch</loc>
+      
+        <lastmod>2014-11-23T16:44:01-08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+  
+    
+    <url>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/404.html</loc>
+      
+        <lastmod>2014-12-11T18:26:17-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -19,9 +214,9 @@
   
     
     <url>
-      <loc>/blog/</loc>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/</loc>
       
-        <lastmod>2014-12-11T18:01:39-08:00</lastmod>
+        <lastmod>2014-12-11T18:26:17-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -36,9 +231,9 @@
   
     
     <url>
-      <loc>/</loc>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/</loc>
       
-        <lastmod>2014-12-11T18:01:39-08:00</lastmod>
+        <lastmod>2014-12-11T18:26:17-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -51,9 +246,9 @@
   
     
     <url>
-      <loc>/css/main.css</loc>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/css/main.css</loc>
       
-        <lastmod>2014-12-11T18:01:39-08:00</lastmod>
+        <lastmod>2014-12-11T18:26:17-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

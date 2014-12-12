@@ -101,3 +101,6 @@ If you plan on using S3 make sure you edit the configs:
   * add your `s3_id`. `s3_secret`, and `s3_bucket`
 * Update the Rakefile notify task to use your url
   * replace `site = "www.YOUR-URL.com"` with your actual url.
+
+## MISC.
+The blog posts included are duplicated from my actual blog and are the documentation of how I created this theme. From starting with a fresh Jekyll installation to the final product.
