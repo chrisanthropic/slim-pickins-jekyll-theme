@@ -21,7 +21,7 @@ Includes the following variables:
 * $primary-color
 * $secondary-color
 * $complimentary-color
-* $background-color
+* $body-bg
 * $text-color
 
 **Text**
