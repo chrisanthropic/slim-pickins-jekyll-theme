@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width initial-scale=1">
 
-  <title>An S3 Policy to Block Semalt Referral Traffic</title>
-  <meta name="description" content="A lot of people have noticed shit tons of ferferral spam from semalt.com and their various other domains.">
+  <title>Slim Pickins Jekyll Theme</title>
+  <meta name="description" content="Witty description here.
+">
 
   <link href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/css/main.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link rel="canonical" href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/an-s3-policy-to-block-semalt-referral-traffic">
+  <link rel="canonical" href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documenation/grid.html">
   <link rel="alternate" type="application/atom+xml" title="Slim Pickins Jekyll Theme" href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/feed.xml"/>
 
   
@@ -84,74 +85,7 @@
   </nav>
 </nav>
 
-        <div class="row">
-
-  <header class="post-header">
-    <h1 class="post-title">An S3 Policy to Block Semalt Referral Traffic</h1>
-    <p class="post-meta">Dec 5, 2014</p>
-  </header>
-
-  <article class="post-content">
-    <p>A lot of people have noticed shit tons of ferferral spam from semalt.com and their various other domains.</p>
-
-<p>It’s fucking annoying.</p>
-
-<p>I found a short S3 policy <a href="http://admium.tumblr.com/">here</a> that blocked semalt.com from accessing static sites hosted on S3 and adapted it to include larger list of all know semalt.com domains as well as some from my logs.</p>
-
-<p>I created a repo for the policy and you can find it <a href="https://github.com/chrisanthropic/S3-semalt-blocklist-policy">here</a>.</p>
-
-<h3 id="about">About</h3>
-<p>The policy blocks variations and subdomains of the given sites: ie <code>semalt.com</code>, <code>semalt.com/anything</code>, <code>randomstringsemalt.com</code>, <code>www.semalt.com</code>, <code>www.semalt.com/anything</code></p>
-
-<h3 id="use">Use</h3>
-<p>Copy and past the contents of <a href="https://raw.githubusercontent.com/chrisanthropic/S3-semalt-blocklist-policy/master/Policy.txt">blocklist.txt</a> to your S3 bucket policy and change the two instances of <code>YOURBUCKETNAME</code> to the actual name of your bucket.</p>
-
-<h3 id="blocklist">Blocklist</h3>
-<p>The following sites are blocked:</p>
-
-<ul>
-  <li>semalt.com</li>
-  <li>backgroundpictures.net</li>
-  <li>baixar-musicas-gratis.com</li>
-  <li>buttons-for-website.com</li>
-  <li>darodar.com</li>
-  <li>descargar-musica-gratis.net</li>
-  <li>embedle.com</li>
-  <li>extener.com</li>
-  <li>extener.org</li>
-  <li>fbdownloader.com</li>
-  <li>fbfreegifts.com</li>
-  <li>feedouble.com</li>
-  <li>feedouble.net</li>
-  <li>japfm.com</li>
-  <li>joinandplay.me</li>
-  <li>joingames.org</li>
-  <li>kambasoft.com</li>
-  <li>musicprojectfoundation.com</li>
-  <li>myprintscreen.com</li>
-  <li>openfrost.com</li>
-  <li>openfrost.net</li>
-  <li>openmediasoft.com</li>
-  <li>pictureframingperth.net.au</li>
-  <li>savetubevideo.com</li>
-  <li>serw.clicksor.com</li>
-  <li>sharebutton.net</li>
-  <li>softomix.com</li>
-  <li>softomix.net</li>
-  <li>softomix.ru</li>
-  <li>soundfrost.org</li>
-  <li>srecorder.com</li>
-  <li>star61.de</li>
-  <li>torontoplumbinggroup.com</li>
-  <li>vapmedia.org</li>
-  <li>videofrost.com</li>
-  <li>youtubedownload.org</li>
-  <li>zazagames.org</li>
-</ul>
-
-  </article>
-
-</div>
+        
 
     </main>
      <footer class="site-footer">
