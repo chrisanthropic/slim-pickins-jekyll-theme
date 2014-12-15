@@ -175,6 +175,7 @@
     background: rgba(0, 0, 0, 0.3);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    padding-left: 25px;
     margin: 0 -15px 0 -15px; }
 
   #nav #hideMenu > a {
