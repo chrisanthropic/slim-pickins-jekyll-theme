@@ -201,7 +201,7 @@
     <url>
       <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/404.html</loc>
       
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -216,7 +216,7 @@
     <url>
       <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/</loc>
       
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -229,41 +229,9 @@
   
     
     <url>
-      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documenation/configuration.html</loc>
+      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/configuration.html</loc>
       
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documenation/deploy.html</loc>
-      
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-  
-    
-    <url>
-      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documenation/footer.html</loc>
-      
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -276,9 +244,41 @@
   
     
     <url>
-      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documenation/grid.html</loc>
+      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/deploy.html</loc>
       
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+  
+    
+    <url>
+      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/footer.html</loc>
+      
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/grid.html</loc>
+      
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -293,7 +293,7 @@
     <url>
       <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/</loc>
       
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -306,9 +306,9 @@
   
     
     <url>
-      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documenation/installation.html</loc>
+      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/installation.html</loc>
       
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -323,7 +323,7 @@
     <url>
       <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/css/main.css</loc>
       
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -336,24 +336,9 @@
   
     
     <url>
-      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documenation/navigation.html</loc>
+      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/navigation.html</loc>
       
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documenation/rakefile.html</loc>
-      
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -366,9 +351,24 @@
   
     
     <url>
-      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documenation/sass.html</loc>
+      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/rakefile.html</loc>
       
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/sass.html</loc>
+      
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -383,9 +383,9 @@
   
     
     <url>
-      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documenation/use.html</loc>
+      <loc>//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/use.html</loc>
       
-        <lastmod>2014-12-15T10:11:57-08:00</lastmod>
+        <lastmod>2014-12-15T10:16:23-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
