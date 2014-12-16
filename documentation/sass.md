@@ -14,7 +14,7 @@ Includes the following variables for easy customization:
 * $body-bg
 * $text-color
 
-**Text**
+**Base Text**
 
 * $base-font-family
 * $base-font-size
@@ -22,12 +22,14 @@ Includes the following variables for easy customization:
 * $base-line-height
 
 
-**Primary Navbar Settings**
+**Navbar Settings**
 
 * $navbar-height
 * $navbar-color
 * $navbar-text-color
 * $navbar-hover-color
+* $navbar-font-size
+* $navbar-font-family
 
 **Socials Navbar Settings**
 

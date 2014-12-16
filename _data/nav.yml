@@ -4,7 +4,7 @@
 - title: "Blog"
   href: "/blog/"
 
-- title: "Documenation"
+- title: "Documentation"
   subcategories:
     - subtitle: "Sass"
       subhref: "/documentation/sass.html"

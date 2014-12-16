@@ -38,8 +38,8 @@
 	border-color: #aaa;
 
 	/* Typography */
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-size: 13px;
+	font-family: $navbar-font-family;
+	font-size: $navbar-font-size;
 	font-weight: 700;
 	color: $secondary-color;
 	text-transform: uppercase;
@@ -124,8 +124,8 @@
 	width: 130px;
 
 	/* Typography */
-	font-family: "Open Sans", sans-serif;
-	font-size: 12px;
+	font-family: $navbar-font-family;
+	font-size: ($navbar-font-size * .92);
 	text-decoration: none;
 	color: $secondary-color;
 	font-weight: 400;
