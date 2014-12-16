@@ -158,7 +158,8 @@
     width: auto; }
 
   #nav #toggleMenu {
-    display: block; }
+    display: block;
+    margin-right: -15px; }
 
   #nav #toggleMenu > a, #nav #hideMenu > a {
     padding: 13px 10px;
