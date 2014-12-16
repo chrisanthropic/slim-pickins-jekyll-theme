@@ -32,6 +32,7 @@ Includes the following variables:
 
 
 **Primary Navbar Settings**
+* $navbar-height
 * $navbar-color
 * $navbar-text-color
 * $navbar-hover-color

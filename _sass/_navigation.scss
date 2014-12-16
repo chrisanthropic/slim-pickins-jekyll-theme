@@ -11,6 +11,7 @@
 
 // Navbar wrap
 .navbar {
+  height: $navbar-height;
   background-color: $navbar-color;
 }
 
@@ -19,7 +20,6 @@
 	z-index: 2;
 	position: relative;
 	display: block;
-	height: 44px;
 	background: $navbar-color;
 }
 
@@ -32,8 +32,9 @@
 // Main navigation links
 #nav>.primary-nav>li>a {
 	/* Layout */
+	line-height: $navbar-height;
 	display: block;
-	padding: 13px 22px;
+	padding: 0 22px;
 	border-color: #aaa;
 
 	/* Typography */
@@ -72,14 +73,14 @@
 	border: 4px solid transparent;
 	border-top-color: inherit;
 	right: 11px;
-	top: 21px;
+	top: ($navbar-height / 2);
 }
 
 // Submenus
 #nav .primary-nav ul {
 	display: block;
 	position: absolute;
-	top: 43px;
+	top: $navbar-height;
 	left: -9999px;
 	opacity: 0;
 	background: $navbar-color;
@@ -150,7 +151,7 @@
 
 // Socials / right menu
 #nav>.right.primary-nav li a{
-  padding: 13px 8px;
+  padding: 0px 8px;
   color: $socials-text-color;
 }
 
@@ -173,7 +174,8 @@
 	}
 
 	#nav>.primary-nav>li>a {
-		padding: 8px 10px;
+		line-height: 45px;
+		padding: 0 10px;
 	}
 
 	.dropdown>a::after {
@@ -202,11 +204,13 @@
 
 	#nav #toggleMenu {
 		display: block;
+		margin-right: -15px;
 	}
 
 	#nav #toggleMenu>a, #nav #hideMenu>a {
-		padding: 13px 10px;
+		padding: 0px 10px;
 		z-index: 1;
+		line-height: 45px;
 	}
 
 	#nav:target li {
@@ -233,7 +237,7 @@
 	#toggleMenu>a::after, #hideMenu>a::after {
 		position: absolute;
 		content: "";
-		right: 20px;
+		right: 35px;
 		top: 21px;
 		height: 9px;
 		width: 20px;
@@ -245,7 +249,7 @@
 	#toggleMenu>a::before, #hideMenu>a::before {
 		position: absolute;
 		content: "";
-		right: 20px;
+		right: 35px;
 		top: 13px;
 		height: 3px;
 		width: 20px;
@@ -259,6 +263,7 @@
 	
 	.navbar {
 	  background-color: $navbar-color;
+	  height: 44px;
 	  display: inline;
 	}
  

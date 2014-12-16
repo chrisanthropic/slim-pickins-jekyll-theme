@@ -24,6 +24,7 @@ Includes the following variables for easy customization:
 
 **Primary Navbar Settings**
 
+* $navbar-height
 * $navbar-color
 * $navbar-text-color
 * $navbar-hover-color
