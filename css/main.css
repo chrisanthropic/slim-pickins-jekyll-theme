@@ -7,13 +7,13 @@
   display: none; }
 
 .navbar {
+  height: 44px;
   background-color: #272727; }
 
 #nav .primary-nav {
   z-index: 2;
   position: relative;
   display: block;
-  height: 44px;
   background: #272727; }
 
 #nav > .primary-nav > li {
@@ -23,8 +23,9 @@
 
 #nav > .primary-nav > li > a {
   /* Layout */
+  line-height: 44px;
   display: block;
-  padding: 13px 22px;
+  padding: 0 22px;
   border-color: #aaa;
   /* Typography */
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
@@ -56,12 +57,12 @@
   border: 4px solid transparent;
   border-top-color: inherit;
   right: 11px;
-  top: 21px; }
+  top: 22px; }
 
 #nav .primary-nav ul {
   display: block;
   position: absolute;
-  top: 43px;
+  top: 44px;
   left: -9999px;
   opacity: 0;
   background: #272727;
@@ -118,7 +119,7 @@
   display: none; }
 
 #nav > .right.primary-nav li a {
-  padding: 13px 8px;
+  padding: 0px 8px;
   color: #aaaaaa; }
 
 #nav > .right.primary-nav li:hover a {
@@ -136,7 +137,8 @@
     display: none; }
 
   #nav > .primary-nav > li > a {
-    padding: 8px 10px; }
+    line-height: 45px;
+    padding: 0 10px; }
 
   .dropdown > a::after {
     display: none; }
@@ -162,8 +164,9 @@
     margin-right: -15px; }
 
   #nav #toggleMenu > a, #nav #hideMenu > a {
-    padding: 13px 10px;
-    z-index: 1; }
+    padding: 0px 10px;
+    z-index: 1;
+    line-height: 45px; }
 
   #nav:target li {
     display: block; }
@@ -208,6 +211,7 @@
 
   .navbar {
     background-color: #272727;
+    height: 44px;
     display: inline; }
 
   #nav > .right.primary-nav {
