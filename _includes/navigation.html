@@ -1,7 +1,7 @@
 <nav class="navbar">
   <nav class="row">
-    <ul id="nav">
-      <div class="columns large-8 left primary-nav">
+    <div id="nav">
+      <ul class="columns large-8 left primary-nav">
 
 	<li id="toggleMenu"><a href="#nav">Menu</a></li>
 	<li id="hideMenu"><a href="#toggleMenu">Menu</a></li>
@@ -19,13 +19,13 @@
 		  <li><a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a></li>
 	  {% endif %}
 	{% endfor %}
-      </div>
+      </ul>
 
-      <div class="columns large-4 right primary-nav">
+      <ul class="columns large-4 right primary-nav">
 	{% for socials in site.data.socials %}
 	  <li class="right"><a href="{{ socials.href }}">{{ socials.title }}</a></li>
 	{% endfor %}
-      </div>
-    </ul>
+      </ul>
+    </div>
   </nav>
 </nav>
