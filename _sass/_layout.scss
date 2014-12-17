@@ -1,7 +1,11 @@
 // Wrap
 .wrap {
+  max-width: 1920px;
   min-height: 100%;
-  margin-bottom: -$footer-height; 
+  display: block;
+  margin-bottom: -$footer-height;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wrap:after {
