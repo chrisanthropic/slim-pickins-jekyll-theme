@@ -12,6 +12,8 @@
       subhref: "/documentation/grid.html"
     - subtitle: "navigation"
       subhref: "/documentation/nav.html"
+    - subtitle: "banner"
+      subhref: "/documentation/banner.html"
     - subtitle: "sticky footer"
       subhref: "/documentation/footer.html"
     - subtitle: "rakefile"

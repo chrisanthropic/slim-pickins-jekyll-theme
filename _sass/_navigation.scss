@@ -20,7 +20,6 @@
 	z-index: 2;
 	position: relative;
 	display: block;
-	background: $navbar-color;
 }
 
 #nav >.primary-nav>li {
@@ -160,6 +159,7 @@
 		width: 100%;
 		max-width: 768px;
 		height: auto;
+		background: $navbar-color;
 	}
 
 	#nav .primary-nav li {
