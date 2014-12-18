@@ -20,6 +20,9 @@
   float: left;
   position: relative; }
 
+#nav > .primary-nav > .right > a {
+  padding: 0px; }
+
 #nav > .primary-nav > li > a {
   /* Layout */
   line-height: 44px;

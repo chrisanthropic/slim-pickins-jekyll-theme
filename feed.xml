@@ -4,10 +4,10 @@
     <title>Slim Pickins Jekyll Theme</title>
     <description>Witty description here.
 </description>
-    <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/</link>
-    <atom:link href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Dec 2014 13:41:45 -0800</pubDate>
-    <lastBuildDate>Thu, 18 Dec 2014 13:41:45 -0800</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 18 Dec 2014 14:07:31 -0800</pubDate>
+    <lastBuildDate>Thu, 18 Dec 2014 14:07:31 -0800</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
@@ -74,8 +74,8 @@
 &lt;p&gt;Now any time you want to update your navigation just edit the &lt;code&gt;_data/nav.yml&lt;/code&gt; file and rebuild your site.&lt;/p&gt;
 </description>
         <pubDate>Tue, 09 Dec 2014 19:34:33 -0800</pubDate>
-        <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-_data-to-build-jekyll-navigation</link>
-        <guid isPermaLink="true">//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-_data-to-build-jekyll-navigation</guid>
+        <link>/blog/2014/using-_data-to-build-jekyll-navigation</link>
+        <guid isPermaLink="true">/blog/2014/using-_data-to-build-jekyll-navigation</guid>
         
         
       </item>
@@ -165,8 +165,8 @@ Running &lt;code&gt;bundle exec rake build&lt;/code&gt; will then run &lt;code&g
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 09 Dec 2014 15:20:40 -0800</pubDate>
-        <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/integrating-compass-and-jekyll-without-plugins</link>
-        <guid isPermaLink="true">//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/integrating-compass-and-jekyll-without-plugins</guid>
+        <link>/blog/2014/integrating-compass-and-jekyll-without-plugins</link>
+        <guid isPermaLink="true">/blog/2014/integrating-compass-and-jekyll-without-plugins</guid>
         
         
       </item>
@@ -227,8 +227,8 @@ Running &lt;code&gt;bundle exec rake build&lt;/code&gt; will then run &lt;code&g
 &lt;p&gt;That’s it. Now you have access to Zurb’s grid without any of the JS or other crap that you don’t need. You can update at any time by replacing the contents of &lt;code&gt;_sass/foundation&lt;/code&gt; with the newest files from the zurb &lt;code&gt;bower-foundation&lt;/code&gt; repo.&lt;/p&gt;
 </description>
         <pubDate>Mon, 08 Dec 2014 20:24:51 -0800</pubDate>
-        <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/integrating-the-foundation-zurb-grid-with-jekyll</link>
-        <guid isPermaLink="true">//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/integrating-the-foundation-zurb-grid-with-jekyll</guid>
+        <link>/blog/2014/integrating-the-foundation-zurb-grid-with-jekyll</link>
+        <guid isPermaLink="true">/blog/2014/integrating-the-foundation-zurb-grid-with-jekyll</guid>
         
         
       </item>
@@ -293,8 +293,8 @@ Running &lt;code&gt;bundle exec rake build&lt;/code&gt; will then run &lt;code&g
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 05 Dec 2014 14:06:15 -0800</pubDate>
-        <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/an-s3-policy-to-block-semalt-referral-traffic</link>
-        <guid isPermaLink="true">//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/an-s3-policy-to-block-semalt-referral-traffic</guid>
+        <link>/blog/2014/an-s3-policy-to-block-semalt-referral-traffic</link>
+        <guid isPermaLink="true">/blog/2014/an-s3-policy-to-block-semalt-referral-traffic</guid>
         
         
       </item>
@@ -337,8 +337,8 @@ max_age:
 &lt;p&gt;From now on you can run &lt;code&gt;bundle exec rake deploy&lt;/code&gt; and the S3_website plugin will compress all of your files, add cache headers to them, and push any that have changed to your S3 bucket.&lt;/p&gt;
 </description>
         <pubDate>Fri, 05 Dec 2014 11:01:42 -0800</pubDate>
-        <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3_website</link>
-        <guid isPermaLink="true">//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3_website</guid>
+        <link>/blog/2014/deploy-jekyll-to-s3-with-s3_website</link>
+        <guid isPermaLink="true">/blog/2014/deploy-jekyll-to-s3-with-s3_website</guid>
         
         
       </item>
@@ -584,8 +584,8 @@ end
 &lt;p&gt;Pretty cool.&lt;/p&gt;
 </description>
         <pubDate>Thu, 04 Dec 2014 16:38:13 -0800</pubDate>
-        <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/rakefile-minimize-assets-and-optimize-images</link>
-        <guid isPermaLink="true">//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/rakefile-minimize-assets-and-optimize-images</guid>
+        <link>/blog/2014/rakefile-minimize-assets-and-optimize-images</link>
+        <guid isPermaLink="true">/blog/2014/rakefile-minimize-assets-and-optimize-images</guid>
         
         
       </item>
@@ -665,8 +665,8 @@ end
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 03 Dec 2014 20:35:05 -0800</pubDate>
-        <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/mail-forwarding-with-mailgun-and-cloudflare</link>
-        <guid isPermaLink="true">//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/mail-forwarding-with-mailgun-and-cloudflare</guid>
+        <link>/blog/2014/mail-forwarding-with-mailgun-and-cloudflare</link>
+        <guid isPermaLink="true">/blog/2014/mail-forwarding-with-mailgun-and-cloudflare</guid>
         
         
       </item>
@@ -782,8 +782,8 @@ end
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 03 Dec 2014 17:17:18 -0800</pubDate>
-        <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/moving-from-github-pages-to-s3</link>
-        <guid isPermaLink="true">//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/moving-from-github-pages-to-s3</guid>
+        <link>/blog/2014/moving-from-github-pages-to-s3</link>
+        <guid isPermaLink="true">/blog/2014/moving-from-github-pages-to-s3</guid>
         
         
       </item>
@@ -880,8 +880,8 @@ sitemap:
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 03 Dec 2014 10:40:40 -0800</pubDate>
-        <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/add-sitemap-xml-to-jekyll</link>
-        <guid isPermaLink="true">//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/add-sitemap-xml-to-jekyll</guid>
+        <link>/blog/2014/add-sitemap-xml-to-jekyll</link>
+        <guid isPermaLink="true">/blog/2014/add-sitemap-xml-to-jekyll</guid>
         
         
       </item>
@@ -928,8 +928,8 @@ google_universal_analytics_cookiedomain: auto
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 02 Dec 2014 19:38:10 -0800</pubDate>
-        <link>//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/adding-google-analytics-to-octopress-3-0</link>
-        <guid isPermaLink="true">//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/adding-google-analytics-to-octopress-3-0</guid>
+        <link>/blog/2014/adding-google-analytics-to-octopress-3-0</link>
+        <guid isPermaLink="true">/blog/2014/adding-google-analytics-to-octopress-3-0</guid>
         
         
       </item>
