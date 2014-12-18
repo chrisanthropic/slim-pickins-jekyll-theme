@@ -19,7 +19,7 @@
 		{% elsif nav.title == page.title %}
 		  <li class="active"><a href="{{ nav.href }}">{{ nav.title }}</a></li>
 		{% else %}
-		  <li><a href="{{ nav.href }}">{{ nav.title }}</a></li>
+		  <li><a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a></li>
 	  {% endif %}
 	{% endfor %}
       </ul>
