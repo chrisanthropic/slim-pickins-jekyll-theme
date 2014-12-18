@@ -45,6 +45,9 @@
   color: white;
   border-top-color: #fff; }
 
+#nav > .primary-nav > li.active {
+  background-color: #404040; }
+
 #nav > .primary-nav > li.dropdown > a {
   padding-right: 28px; }
 

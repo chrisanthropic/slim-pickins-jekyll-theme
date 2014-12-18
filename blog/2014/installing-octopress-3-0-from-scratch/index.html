@@ -1,6 +1,188 @@
-<!DOCTYPE html> <html> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width initial-scale=1"> <title>Installing Octopress 3.0 From Scratch</title> <meta name="description" content="I’ve been getting excited for the release of Octopress 3.0 and decided to try installing it today. I’ve never used Jekyll without Octopress so I struggled a ..."> <link href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/css/main.css" media="screen, projection" rel="stylesheet" type="text/css"> <link rel="canonical" href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/installing-octopress-3-0-from-scratch"> <link rel="alternate" type="application/atom+xml" title="Slim Pickins Jekyll Theme" href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/feed.xml"/> </head> <body> <main class="wrap"> <nav class="navbar"> <nav class="row"> <div id="nav"> <ul class="columns large-8 left primary-nav"> <li id="toggleMenu"><a href="#nav">Menu</a></li> <li id="hideMenu"><a href="#toggleMenu">Menu</a></li> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/">Home</a></li> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/">Blog</a></li> <li class="dropdown"> <a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme">Documentation</a> <ul> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/sass.html">Sass</a></li> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/grid.html">Grid</a></li> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/nav.html">Navigation</a></li> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/footer.html">Sticky Footer</a></li> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/rakefile.html">Rakefile</a></li> </ul> <li class="dropdown"> <a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme">Use</a> <ul> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/installation.html">Installation</a></li> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/configuration.html">Configuration</a></li> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/deploy.html">Deployment</a></li> <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/use.html">Basic Use</a></li> </ul> </ul> <ul class="columns large-4 right primary-nav"> <li class="right"><a href="https://twitter.com/">Twitter</a></li> <li class="right"><a href="https://github.com/">Github</a></li> </ul> </div> </nav> </nav> <article class="row post-content"> <header class="post-header"> <h1 class="post-title">Installing Octopress 3.0 From Scratch</h1> <p class="post-meta">Nov 23, 2014</p> </header> <p>I’ve been getting excited for the release of Octopress 3.0 and decided to try installing it today. I’ve never used Jekyll without Octopress so I struggled a little, but it was a relatively painless experience.</p> <p>Listed below are the steps I took to get a brand new Octopress 3.0 install</p> <h2 id="assumptions">Assumptions</h2> <p>I’m assuming that you’re not <em>migrating</em> from Octopress 2.0 but are starting completely from scratch in a new/empty directory.</p> <h2 id="install-jekyll">Install Jekyll</h2> <p><code>gem install jekyll</code></p> <h2 id="create-site-scaffolding">Create Site scaffolding</h2> <p><code>jekyll new SITENAME</code><br/> <code>cd SITENAME</code></p> <h2 id="install-octopress">Install Octopress</h2> <ul> <li>Add a Gemfile to your directory with the following content:</li> </ul> <pre><code>source "https://rubygems.org"
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Installing Octopress 3.0 From Scratch</title>
+  <meta name="description" content="I’ve been getting excited for the release of Octopress 3.0 and decided to try installing it today. I’ve never used Jekyll without Octopress so I struggled a ...">
+
+  <link href="/css/main.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="canonical" href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/installing-octopress-3-0-from-scratch">
+  <link rel="alternate" type="application/atom+xml" title="Slim Pickins Jekyll Theme" href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/feed.xml"/>
+
+  
+ 
+</head>
+
+
+  <body>
+    <main class="wrap">
+        <nav class="navbar">
+  <nav class="row">
+    <div id="nav">
+      <ul class="columns large-8 left primary-nav">
+
+	<li id="toggleMenu"><a href="#nav">Menu</a></li>
+	<li id="hideMenu"><a href="#toggleMenu">Menu</a></li>
+	
+	
+	  
+		  <li><a href="/">home</a></li>
+	  
+	
+	  
+		  <li><a href="/blog/">blog</a></li>
+	  
+	
+	  
+	    <li class="dropdown">
+	      <a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme">documentation</a>
+		<ul>
+		  
+		    <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/sass.html">sass</a></li>
+		  
+		    <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/grid.html">grid</a></li>
+		  
+		    <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/nav.html">navigation</a></li>
+		  
+		    <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/footer.html">sticky footer</a></li>
+		  
+		    <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/rakefile.html">rakefile</a></li>
+		  
+		</ul>
+	    </li>
+		
+	
+	  
+	    <li class="dropdown">
+	      <a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme">use</a>
+		<ul>
+		  
+		    <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/installation.html">installation</a></li>
+		  
+		    <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/configuration.html">configuration</a></li>
+		  
+		    <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/deploy.html">deployment</a></li>
+		  
+		    <li><a href="//chrisanthropic.github.io/slim-pickins-jekyll-theme/documentation/use.html">basic use</a></li>
+		  
+		</ul>
+	    </li>
+		
+	
+      </ul>
+
+      <ul class="columns large-4 right primary-nav">
+	
+	  <li class="right"><a href="https://twitter.com/">Twitter</a></li>
+	
+	  <li class="right"><a href="https://github.com/">Github</a></li>
+	
+      </ul>
+    </div>
+  </nav>
+</nav>
+
+        <article class="row post-content">
+
+    <header class="post-header">
+      <h1 class="post-title">Installing Octopress 3.0 From Scratch</h1>
+      <p class="post-meta">Nov 23, 2014</p>
+    </header>
+    <p>I’ve been getting excited for the release of Octopress 3.0 and decided to try installing it today. I’ve never used Jekyll without Octopress so I struggled a little, but it was a relatively painless experience.</p>
+
+<p>Listed below are the steps I took to get a brand new Octopress 3.0 install</p>
+
+<h2 id="assumptions">Assumptions</h2>
+<p>I’m assuming that you’re not <em>migrating</em> from Octopress 2.0 but are starting completely from scratch in a new/empty directory.</p>
+
+<h2 id="install-jekyll">Install Jekyll</h2>
+<p><code>gem install jekyll</code></p>
+
+<h2 id="create-site-scaffolding">Create Site scaffolding</h2>
+<p><code>jekyll new SITENAME</code><br />
+<code>cd SITENAME</code></p>
+
+<h2 id="install-octopress">Install Octopress</h2>
+
+<ul>
+  <li>Add a Gemfile to your directory with the following content:</li>
+</ul>
+
+<pre><code>source "https://rubygems.org"
 gem 'octopress', '~&gt; 3.0.0.rc.15'
 gem 'rake'
 gem 'octopress-deploy'
 gem 'aws-sdk'
-</code></pre> <ul> <li>Add these to your <code>.gitignore</code><br/> <code> _deploy.yml .bundle bin vendor </code></li> <li>Run <code>bundle install --binstubs --path=vendor</code> <ul> <li>This installs all of the required ruby gems to a subdirectory here, making it easier to manage per project.</li> </ul> </li> <li>Run <code>bundle exec octopress init</code></li> <li>Add this to your <code>_config.yml</code> so the Ruby stuff is ignored when builing your site<br/> <code>exclude: [.bundle, bin, vendor]</code></li> </ul> <h2 id="set-up-github-deployment">Set up Github deployment</h2> <ol> <li>Create your Github-pages repo via Github</li> <li>Run <code>octopress deploy init git</code></li> <li>Add your git URL to <code>_deploy.yml</code> file</li> </ol> <h2 id="cname">CNAME</h2> <p>Create your CNAME file if you’re using a custom URL with Github-pages</p> <h2 id="build-your-site">Build your site</h2> <p><code>octopress build</code></p> <h2 id="preview-your-site">Preview your site</h2> <ol> <li>Run <code>octopress serve</code></li> <li>Visit <code>127.0.0.1:4000</code></li> </ol> <h2 id="commit-source">Commit Source</h2> <ol> <li>Run <code>git init</code></li> <li>Run <code>git remote add origin GIT-REPO-URl</code></li> <li>Run<br/> <code>git add .</code><br/> <code>git commit -m 'inital Octopress 3.0 install'</code><br/> <code>git checkout -b source</code></li> <li>Run <code>git push -u origin source</code></li> </ol> <h2 id="deploy-the-site">Deploy the Site</h2> <p>Run <code>octopress deploy</code> </p> </article> </main> <footer class="site-footer"> <div class="row"> <div class="small-6 columns"> </div> <div class="small-6 columns"> </div> </div> </footer> </body> </html>
+</code></pre>
+
+<ul>
+  <li>Add these to your <code>.gitignore</code><br />
+<code>
+_deploy.yml
+.bundle
+bin
+vendor
+</code></li>
+  <li>Run <code>bundle install --binstubs --path=vendor</code>
+    <ul>
+      <li>This installs all of the required ruby gems to a subdirectory here, making it easier to manage per project.</li>
+    </ul>
+  </li>
+  <li>Run <code>bundle exec octopress init</code></li>
+  <li>Add this to your <code>_config.yml</code> so the Ruby stuff is ignored when builing your site<br />
+<code>exclude: [.bundle, bin, vendor]</code></li>
+</ul>
+
+<h2 id="set-up-github-deployment">Set up Github deployment</h2>
+<ol>
+  <li>Create your Github-pages repo via Github</li>
+  <li>Run <code>octopress deploy init git</code></li>
+  <li>Add your git URL to <code>_deploy.yml</code> file</li>
+</ol>
+
+<h2 id="cname">CNAME</h2>
+<p>Create your CNAME file if you’re using a custom URL with Github-pages</p>
+
+<h2 id="build-your-site">Build your site</h2>
+<p><code>octopress build</code></p>
+
+<h2 id="preview-your-site">Preview your site</h2>
+
+<ol>
+  <li>Run <code>octopress serve</code></li>
+  <li>Visit <code>127.0.0.1:4000</code></li>
+</ol>
+
+<h2 id="commit-source">Commit Source</h2>
+<ol>
+  <li>Run <code>git init</code></li>
+  <li>Run <code>git remote add origin GIT-REPO-URl</code></li>
+  <li>Run<br />
+<code>git add .</code><br />
+<code>git commit -m 'inital Octopress 3.0 install'</code><br />
+<code>git checkout -b source</code></li>
+  <li>Run <code>git push -u origin source</code></li>
+</ol>
+
+<h2 id="deploy-the-site">Deploy the Site</h2>
+<p>Run <code>octopress deploy</code> </p>
+
+
+</article>
+
+    </main>
+     <footer class="site-footer">
+  <div class="row">
+    <div class="small-6 columns">
+    </div>
+    <div class="small-6 columns">
+    </div>
+  </div>
+</footer> 
+
+  </body>
+</html>
