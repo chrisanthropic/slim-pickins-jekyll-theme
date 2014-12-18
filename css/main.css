@@ -13,8 +13,7 @@
 #nav .primary-nav {
   z-index: 2;
   position: relative;
-  display: block;
-  background: #272727; }
+  display: block; }
 
 #nav > .primary-nav > li {
   display: block;
@@ -125,7 +124,8 @@
   #nav .primary-nav {
     width: 100%;
     max-width: 768px;
-    height: auto; }
+    height: auto;
+    background: #272727; }
 
   #nav .primary-nav li {
     float: none;
@@ -443,6 +443,10 @@ pre {
 
 .site-footer {
   background: #676767; }
+
+.center {
+  display: block;
+  margin: 0 auto; }
 
 meta.foundation-version {
   font-family: "/5.4.7/"; }

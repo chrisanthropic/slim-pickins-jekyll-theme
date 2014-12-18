@@ -10,6 +10,7 @@ Slim Pickins is what I consider to be a minimal 'core' theme with everything I n
 * SASS
 * Responsive grid
 * Responsive navigation
+* Optional banner
 * Sticky footer
 * **Javascript free**
 * Custom Rakefile with tasks for deploying, minifying, optimizing images, and notifying search engines about updates
