@@ -59,6 +59,11 @@
 	border-top-color: #fff;
 }
 
+// Active state of the links
+#nav>.primary-nav>li.active {
+	background-color: $navbar-active-color;
+}
+
 #nav>.primary-nav>li.dropdown>a {
 	padding-right: 28px;
 }

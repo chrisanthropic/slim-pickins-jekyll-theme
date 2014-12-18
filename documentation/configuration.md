@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Configuration"
+title: "configuration"
 permalink: /documentation/configuration.html
 --- 
 * Edit your config.yml file

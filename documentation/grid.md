@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Grid"
+title: "grid"
 permalink: /documentation/grid.html
 ---
 

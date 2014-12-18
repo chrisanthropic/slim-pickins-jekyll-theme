@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Deployment"
+title: "deployment"
 permalink: /documentation/deploy.html
 --- 
 I use S3 to host my site and the [s3_website](https://github.com/laurilehmijoki/s3_website) plugin to deploy, if you don't do both of these, delete the `s3_website.yml` file and edit the deploy raketask to fit your needs.

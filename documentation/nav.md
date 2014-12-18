@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Navigation"
+title: "navigation"
 permalink: /documentation/nav.html
 ---
 

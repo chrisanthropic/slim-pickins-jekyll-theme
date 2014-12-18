@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "SASS"
+title: "sass"
 permalink: /documentation/sass.html
 --- 
 
@@ -28,6 +28,7 @@ Includes the following variables for easy customization:
 * $navbar-color
 * $navbar-text-color
 * $navbar-hover-color
+* $navbar-active-color
 * $navbar-font-size
 * $navbar-font-family
 

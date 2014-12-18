@@ -1,5 +1,5 @@
 ---
 layout: page
-title: "Basic Use"
+title: "basic use"
 permalink: /documentation/use.html
 --- 

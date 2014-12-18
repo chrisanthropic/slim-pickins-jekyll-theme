@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Rakefile"
+title: "rakefile"
 permalink: /documentation/rakefile.html
 --- 
 Includes the following custom tasks:
