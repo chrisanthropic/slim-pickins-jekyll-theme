@@ -12,15 +12,20 @@ Includes the following variables for easy customization:
 * $secondary-color
 * $complimentary-color
 * $body-bg
-* $text-color
+* $body-font-color
 
-**Base Text**
+**Links**
+
+* link-color
+* link-hover-color
+* link-visited-color
+
+**Text**
 
 * $base-font-family
 * $base-font-size
 * $small-font-size
 * $base-line-height
-
 
 **Navbar Settings**
 
@@ -34,8 +39,8 @@ Includes the following variables for easy customization:
 
 **Socials Navbar Settings**
 
-* $socials-text-color
-* $socials-hover-color
+* $socials-font-color
+* $socials-font-size
 
 **Utility**
 

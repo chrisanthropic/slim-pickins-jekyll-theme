@@ -22,14 +22,18 @@ Includes the following variables:
 * $secondary-color
 * $complimentary-color
 * $body-bg
-* $text-color
+* $body-font-color
 
-**Base Text**
+**Links**
+* link-color
+* link-hover-color
+* link-visited-color
+
+**Text**
 * $base-font-family
 * $base-font-size
 * $small-font-size
 * $base-line-height
-
 
 **Navbar Settings**
 * $navbar-height
@@ -41,8 +45,8 @@ Includes the following variables:
 * $navbar-font-family
 
 **Socials Navbar Settings**
-* $socials-text-color
-* $socials-hover-color
+* $socials-font-color
+* $socials-font-size
 
 **Utility**
 * $spacing-unit

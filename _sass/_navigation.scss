@@ -154,16 +154,6 @@
 }
 
 
-// Socials / right menu
-#nav>.right.primary-nav li a{
-  padding: 0px 8px;
-  color: $socials-text-color;
-}
-
-#nav>.right.primary-nav li:hover a{
-  color: $socials-hover-color;
-}
-
 // Styling for mobile devices
 @media screen and (max-width: 768px) {
 	#nav .primary-nav{
@@ -274,9 +264,5 @@
  
 	#nav>.right.primary-nav  {
 	  background-color: lighten($navbar-color, 10%);
-	}
-  
-	#nav>.right.primary-nav li{
-	  padding: 0;
 	}
 } 

@@ -26,7 +26,7 @@
 
       <ul class="columns large-4 right primary-nav">
 	{% for socials in site.data.socials %}
-	  <li class="right"><a href="{{ socials.href }}">{{ socials.title }}</a></li>
+	  <a href="{{ socials.href }}"><li class="right icon-{{ socials.title }}"></li></a>
 	{% endfor %}
       </ul>
     </div>
