@@ -36,8 +36,9 @@ Includes the following variables:
 * $navbar-color
 * $navbar-text-color
 * $navbar-hover-color
-* navbar-font-size
-* navbar-font-family
+* $navbar-active-color
+* $navbar-font-size
+* $navbar-font-family
 
 **Socials Navbar Settings**
 * $socials-text-color
