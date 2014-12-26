@@ -13,7 +13,8 @@ Slim Pickins is what I consider to be a minimal 'core' theme with everything I n
 * Optional full-width banner
 * Sticky footer
 * **Javascript free**
-* Custom Rakefile with tasks for deploying, minifying, optimizing images, and notifying search engines about updates
+* Custom Rakefile with tasks for deploying, minifying, and notifying search engines about updates
+* image_optim plugin to optimize all images
 
 ### SASS
 Includes the following variables:
@@ -94,17 +95,16 @@ The only thing in the theme that uses Javascript is the optional use of google a
 ### RAKEFILE
 Includes the following custom tasks:
 
-* *optimizeimages* - uses minimagick to compress and optimize all images in the /images folder.
 * *minify_html* - uses HTML_compressor to minify HTML
 * *notify* - pings google and bing to notify them about changes to the site/sitemap
 
 These 3 tasks have been bundled into custom build and deploy tasks
 
-* *build* - runs `jekyll build` and then `optimize images` followed by `minify_html`
+* *build* - runs `jekyll build` followed by `minify_html`
 * *deploy* - runs `s3_website push` and then `notify`
 
 ## Basic Use
-For now theming on Jekyll sucks in that it's not super easy to change themes. For now it's best to start fresh or install the them and then transfer over any old files (posts, images, etc) from your old site.
+For now it's best to start fresh or install the them and then transfer over any old files (posts, images, etc) from your old site.
 
 * Git clone this repo, cd into the directory and run `bundle install --binstubs --path=vendor` to install the required dependencies.
 * Edit your config.yml file
