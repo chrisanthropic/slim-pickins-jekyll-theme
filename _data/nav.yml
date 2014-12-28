@@ -18,6 +18,8 @@
       subhref: "/documentation/footer.html"
     - subtitle: "rakefile"
       subhref: "/documentation/rakefile.html"
+    - subtitle: "image_optim"
+      subhref: "/documentation/image-optim.html"
 
 - title: "use"
   subcategories:
