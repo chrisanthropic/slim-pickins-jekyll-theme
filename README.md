@@ -98,10 +98,16 @@ Includes the following custom tasks:
 * *minify_html* - uses HTML_compressor to minify HTML
 * *notify* - pings google and bing to notify them about changes to the site/sitemap
 
-These 3 tasks have been bundled into custom build and deploy tasks
+These tasks have been bundled into custom build and deploy tasks
 
 * *build* - runs `jekyll build` followed by `minify_html`
 * *deploy* - runs `s3_website push` and then `notify`
+
+### IMAGE_OPTIM PLUGIN
+
+* Custom [image_optim](https://github.com/chrisanthropic/image_optim-jekyll-plugin) plugin will optimize all images in the /images folder and any subdirectories
+  * Uses the original [image_optim](https://github.com/toy/image_optim)
+* Cache file is created on the first run so that only updated/new images are optimized
 
 ## Basic Use
 For now it's best to start fresh or install the them and then transfer over any old files (posts, images, etc) from your old site.
