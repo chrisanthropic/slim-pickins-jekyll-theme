@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Slim Pickins Jekyll Theme]]></title>
+  <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/atom.xml" rel="self"/>
+  <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/"/>
+  <updated>2014-12-31T16:56:27-08:00</updated>
+  <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://jekyllrb.com/">Jekyll</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using _data to Build Jekyll Navigation]]></title>
+    <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-_data-to-build-jekyll-navigation?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign=Using_datatoBuildJekyllNavigation"/>
+    <updated>2014-12-09T19:34:33-08:00</updated>
+    <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-_data-to-build-jekyll-navigation</id>
+    <content type="html"><![CDATA[<p>I wanted an easy way to create my navigation menus and I found a great post <a href="http://www.tournemille.com/blog/How-to-create-data-driven-navigation-in-Jekyll/">here</a> on using the new-ish ‘data’ feature of Jekyll.</p>
+
+<p>What this allows us to do is centralize our navigation setup (pages and subpages) so any changes are kept out of our actual layout code.</p>
+
+<p>Here’s what I did:</p>
+
+<ul>
+  <li>Add a new file called <code>nav.yml</code> in your _data directory
+    <ul>
+      <li>Create the _data directory if it doesn’t already exist</li>
+    </ul>
+  </li>
+  <li>Paste this template into <code>_data/nav.yml</code> and edit it to fit your needs</li>
+</ul>
+
+<pre><code>- title: "Home"
+  href: "/"
+
+- title: "Blog"
+  href: "/blog/"
+
+- title: "Misc"
+  subcategories:
+    - subtitle: "Example"
+      subhref: "#"
+    - subtitle: "Example2"
+      subhref: "#"
+</code></pre>
+
+<ul>
+  <li>Edit your <code>_includes/naviation.html</code> to match the following</li>
+</ul>
+
+<pre><code>
+&lt;nav class="animenu"&gt;	
+  &lt;input type="checkbox" id="button"&gt;
+  &lt;label for="button" onclick&gt;Menu&lt;/label&gt; 
+  &lt;ul&gt;
+    {% for nav in site.data.nav %}
+      {% if nav.subcategories != null %}
+	&lt;li&gt;
+	  &lt;a href="{{ site.url }}{{ nav.url }}"&gt;{{ nav.title }} &amp;#x25BC;&lt;/a&gt;
+	  &lt;ul&gt;
+	    {% for subcategory in nav.subcategories %}
+	      &lt;li&gt;&lt;a href="{{ site.url }}{{ subcategory.subhref }}"&gt;{{ subcategory.subtitle }}&lt;/a&gt;&lt;/li&gt;
+	    {% endfor %}
+	  &lt;/ul&gt;
+	{% elsif nav.title == page.title %}
+	  &lt;li class="active"&gt;&lt;a href="{{ nav.url }}"&gt;{{ nav.title }}&lt;/a&gt;&lt;/li&gt;
+	{% else %} 
+	&lt;li&gt;
+	  &lt;a href="{{ site.url }}{{ nav.href }}"&gt;{{ nav.title }}&lt;/a&gt;&lt;/li&gt;
+      {% endif %}
+    {% endfor %}
+  &lt;/ul&gt;
+&lt;/nav&gt; 
+
+</code></pre>
+
+<p>Now any time you want to update your navigation just edit the <code>_data/nav.yml</code> file and rebuild your site.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Integrating Compass and Jekyll Without Plugins]]></title>
+    <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/integrating-compass-and-jekyll-without-plugins?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign=IntegratingCompassandJekyllWithoutPlugins"/>
+    <updated>2014-12-09T15:20:40-08:00</updated>
+    <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/integrating-compass-and-jekyll-without-plugins</id>
+    <content type="html"><![CDATA[<p>I find myself getting closer to the point where I’m done with the scaffolding and can finally start with the design. The more fun stuff I look at the more I realize that integrating Compass is probably a good idea.</p>
+
+<p>I don’t like plugins unless absolutely necessarry so while I’m sure the jekyll-compass plugin is great, I decided to figure out how to add Compass to my Jekyll/Octopress 3 site without any plugins.</p>
+
+<p>Here’s what I did.</p>
+
+<ul>
+  <li>Add compass to your gemfile</li>
+  <li>Install compass<br />
+<code>bundle install --binstubs --path=vendor</code></li>
+  <li>Run Compass for the first time so it generates a config file<br />
+<code>bundle exec compass create --bare --sass-dir "_sass" --css-dir "css" --images-dir "images"</code>
+    <ul>
+      <li>This command creates a config.rb file wiht compass settings that are compatible with Jekyll</li>
+    </ul>
+  </li>
+  <li>Move the default Jekyll css/main.css to _sass/main.css
+    <ul>
+      <li>remove the yaml frontmatter from the file once you’ve moved it to the _sass directory</li>
+    </ul>
+  </li>
+  <li>Delete the css directory</li>
+  <li>Update rakefile to run compass compile before building</li>
+</ul>
+
+<pre><code>desc "build the site"
+task :build do
+  system "bundle exec compass compile"
+  system "bundle exec jekyll build"
+  system "bundle exec rake minify_html"
+  system "bundle exec rake optimizeimages"
+end
+</code></pre>
+<ul>
+  <li>Run <code>bundle exec rake build</code></li>
+  <li>
+    <p>NOTE - compression settings are no longer set in _config.yml, you’ll need to add the following line to <code>config.rb</code> in oroder to compress css<br />
+<code>output_style = :compressed</code></p>
+  </li>
+  <li>Update rakefile to run compass watch and jekyll serve together</li>
+</ul>
+
+<pre><code>##############
+#   Develop  #
+##############
+
+# Useful for development
+# It watches for chagnes and updates when it finds them
+
+desc "Watch the site and regenerate when it changes"
+task :watch do
+  puts "Starting to watch source with Jekyll and Compass."
+  system "compass compile" unless File.exist?("css/main.css")
+  system "jekyll build"
+  jekyllPid = Process.spawn("jekyll serve --watch")
+  compassPid = Process.spawn("compass watch")
+
+  trap("INT") {
+    [jekyllPid, compassPid].each { |pid| Process.kill(9, pid) rescue Errno::ESRCH }
+    exit 0
+  }
+
+  [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
+end
+</code></pre>
+<ul>
+  <li>Now you can run <code>bundle exec rake watch</code> and it runs compass watch &amp; jekyll serve together.</li>
+</ul>
+
+<p>Now you can use Compass mixins and import partials by adding <code>@import compass/blahblahblah</code> to your _sass/main.scss file.<br />
+Running <code>bundle exec rake build</code> will then run <code>compass compile</code> to create your css/main.scss file, followed by <code>jekyll build</code> which will move that css/main.scss to _site/css/main.css</p>
+
+<p>In short:</p>
+
+<ul>
+  <li>you can store any partials you want to in the _sass directory (or subdirectories)</li>
+  <li>you can import these partials via your main.scss file</li>
+  <li>any partials imported will be compiled into a single file (css/main.scss) when you run <code>compass compile</code></li>
+  <li>the css/main.scss file will be built into _site/css/main.css when you run <code>jekyll build</code></li>
+  <li>any partials not imported by your _sass/main.scss file will not be used</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Integrating the Foundation Zurb Grid With Jekyll]]></title>
+    <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/integrating-the-foundation-zurb-grid-with-jekyll?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign=IntegratingtheFoundationZurbGridWithJekyll"/>
+    <updated>2014-12-08T20:24:51-08:00</updated>
+    <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/integrating-the-foundation-zurb-grid-with-jekyll</id>
+    <content type="html"><![CDATA[<p>I was playing with the idea of using Bourbon Neat to create a semantic grid but when it comes down to it I’m familiar with Zurb and I like how it works.</p>
+
+<p>I make a decent amount of sites for friends and non-profits and the benefits of Zurbs rapid prototyping are worth it for me.</p>
+
+<p>That being said, I use very little of Zurb’s stuff so for now I’m just starting with the grid and visibility classes. Here’s how I did it.</p>
+
+<h3 id="with-compass">With Compass</h3>
+<p>This is an update to my original post since I’ve started using Compass. If you don’t use Compass you can still follow the instructions in the ‘Without Compass’ section.</p>
+
+<ul>
+  <li>clone the bower-foundation repo into your _sass directory<br />
+<code>git clone git@github.com:zurb/bower-foundation.git</code></li>
+  <li>create a new subdirectory in your _sass directory called <code>foundation</code></li>
+  <li>copy the contents of <code>bower-foundation/scss/foundation</code> to your new subdirectory
+    <ul>
+      <li>this should include <code>_functions.scss</code>, <code>_settings.scss</code>, and a directory named <code>components</code></li>
+    </ul>
+  </li>
+  <li>You can now @import any of the zurb scss stuff from your <code>css/main.scss</code> file. For now I’m just importing the grid and visibility:</li>
+</ul>
+
+<pre><code>@import "foundation/components/grid";
+@import "foundation/components/visibility";
+</code></pre>
+
+<ul>
+  <li>Note - grid will automatically @import <code>foundation/components/global</code> which @imports `foundation/components/fuctions</li>
+</ul>
+
+<h3 id="without-compass">Without Compass</h3>
+<p>Here’s the first way I did it, before I integrated compass into my Jekyll site.</p>
+
+<ul>
+  <li>Create a folder in your _sass directory called ‘foundation’</li>
+  <li>Git clone the ‘bower_foundation’ repo anywhere on your computer<br />
+<code>git clone git@github.com:zurb/bower-foundation.git</code></li>
+  <li>Copy the contents of <code>bower-foundation/scss/foundation/components/</code> to the <code>_sass/foundation</code> directory you created in step 1.</li>
+  <li>Copy <code>bower-foundation/scss/foundation/_functions.scss</code> to the <code>_sass/foundation</code> directory.</li>
+  <li>Open <code>_sass/foundation/global.scss</code> and edit the <code>@import ../"functions";</code> line to read <code>@import "functions"</code> since we moved it into the same directory.</li>
+  <li>Delete the <code>bower-foundation</code> directory, you don’t need it anymore.</li>
+  <li>You can now @import any of the zurb scss stuff from your <code>css/main.scss</code> file. For now I’m just importing the grid and visibility:</li>
+</ul>
+
+<pre><code>@import "foundation/grid";
+@import "foundation/visibility";
+</code></pre>
+
+<ul>
+  <li>Note - grid will automatically @import <code>foundation/global</code> which @imports <code>foundation/fuctions</code></li>
+</ul>
+
+<p>That’s it. Now you have access to Zurb’s grid without any of the JS or other crap that you don’t need. You can update at any time by replacing the contents of <code>_sass/foundation</code> with the newest files from the zurb <code>bower-foundation</code> repo.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[An S3 Policy to Block Semalt Referral Traffic]]></title>
+    <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/an-s3-policy-to-block-semalt-referral-traffic?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign=AnS3PolicytoBlockSemaltReferralTraffic"/>
+    <updated>2014-12-05T14:06:15-08:00</updated>
+    <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/an-s3-policy-to-block-semalt-referral-traffic</id>
+    <content type="html"><![CDATA[<p>A lot of people have noticed shit tons of ferferral spam from semalt.com and their various other domains.</p>
+
+<p>It’s fucking annoying.</p>
+
+<p>I found a short S3 policy <a href="http://admium.tumblr.com/">here</a> that blocked semalt.com from accessing static sites hosted on S3 and adapted it to include larger list of all know semalt.com domains as well as some from my logs.</p>
+
+<p>I created a repo for the policy and you can find it <a href="https://github.com/chrisanthropic/S3-semalt-blocklist-policy">here</a>.</p>
+
+<h3 id="about">About</h3>
+<p>The policy blocks variations and subdomains of the given sites: ie <code>semalt.com</code>, <code>semalt.com/anything</code>, <code>randomstringsemalt.com</code>, <code>www.semalt.com</code>, <code>www.semalt.com/anything</code></p>
+
+<h3 id="use">Use</h3>
+<p>Copy and past the contents of <a href="https://raw.githubusercontent.com/chrisanthropic/S3-semalt-blocklist-policy/master/Policy.txt">blocklist.txt</a> to your S3 bucket policy and change the two instances of <code>YOURBUCKETNAME</code> to the actual name of your bucket.</p>
+
+<h3 id="blocklist">Blocklist</h3>
+<p>The following sites are blocked:</p>
+
+<ul>
+  <li>semalt.com</li>
+  <li>backgroundpictures.net</li>
+  <li>baixar-musicas-gratis.com</li>
+  <li>buttons-for-website.com</li>
+  <li>darodar.com</li>
+  <li>descargar-musica-gratis.net</li>
+  <li>embedle.com</li>
+  <li>extener.com</li>
+  <li>extener.org</li>
+  <li>fbdownloader.com</li>
+  <li>fbfreegifts.com</li>
+  <li>feedouble.com</li>
+  <li>feedouble.net</li>
+  <li>japfm.com</li>
+  <li>joinandplay.me</li>
+  <li>joingames.org</li>
+  <li>kambasoft.com</li>
+  <li>musicprojectfoundation.com</li>
+  <li>myprintscreen.com</li>
+  <li>openfrost.com</li>
+  <li>openfrost.net</li>
+  <li>openmediasoft.com</li>
+  <li>pictureframingperth.net.au</li>
+  <li>savetubevideo.com</li>
+  <li>serw.clicksor.com</li>
+  <li>sharebutton.net</li>
+  <li>softomix.com</li>
+  <li>softomix.net</li>
+  <li>softomix.ru</li>
+  <li>soundfrost.org</li>
+  <li>srecorder.com</li>
+  <li>star61.de</li>
+  <li>torontoplumbinggroup.com</li>
+  <li>vapmedia.org</li>
+  <li>videofrost.com</li>
+  <li>youtubedownload.org</li>
+  <li>zazagames.org</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Deploy Jekyll to S3 With S3_website]]></title>
+    <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3_website?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign=DeployJekylltoS3WithS3_website"/>
+    <updated>2014-12-05T11:01:42-08:00</updated>
+    <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3_website</id>
+    <content type="html"><![CDATA[<p>I’d originally set this up to deploy to S3 using the new-ish Octopress-Deploy gem but after using it a bit I’ve found that it’s still too rough to be my goto.</p>
+
+<p>The main benefits of switching to S3_website are:</p>
+
+<ul>
+  <li>Incremental deploy. It only pushes files that have been updated.</li>
+  <li>Proper metadata. Octopress-deploy marked all of my files as <code>Content-Type: image/jpeg</code> </li>
+  <li>Caching. Setting max-age is very simple with this plugin.</li>
+  <li>Gzip. The plugin can automatically compress the files before pushing it to S3. This makes things load faster and reduces your bandwidth costs.</li>
+</ul>
+
+<p>Below are the steps I took to migrate from <code>octopress-deploy</code> to <a href="https://github.com/laurilehmijoki/s3_website">S3_website</a>.</p>
+
+<ul>
+  <li>First I added <code>s3_website.yml</code> to .gitignore since it’ll hold our S3 credentials and we don’t want those public.</li>
+  <li>add s3_website to Gemfile</li>
+  <li>Install the gem by running <code>bundle install --binstubs --path=vendor</code></li>
+  <li>Create the default config by running <code>bundle exec s3_website cfg create</code></li>
+  <li>add your S3 credentials to <code>s3_config.yml</code></li>
+  <li><strong>GZIP</strong> add <code>gzip: true</code> to <code>s3_website.yml</code></li>
+  <li><strong>CACHE</strong> Update max-age in <code>s3_website.yml</code><br />
+<code>
+max_age:
+"css/*": 604800
+"*": 300
+</code></li>
+  <li>update Rakefile build command to <code>system "bundle exec s3_website push"</code></li>
+  <li>bundle exec rake build</li>
+  <li>run the initial push with the –force flag just to make sure it updates cache metadata for all files<br />
+<code>bundle exec s3_website push --force</code></li>
+  <li>Login to Cloudflare and purge the cache to make sure your serving up your new gzip/cache files</li>
+</ul>
+
+<p>From now on you can run <code>bundle exec rake deploy</code> and the S3_website plugin will compress all of your files, add cache headers to them, and push any that have changed to your S3 bucket.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rakefile: Minimize Assets and Optimize Images]]></title>
+    <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/rakefile-minimize-assets-and-optimize-images?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign=Rakefile:MinimizeAssetsandOptimizeImages"/>
+    <updated>2014-12-04T16:38:13-08:00</updated>
+    <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/rakefile-minimize-assets-and-optimize-images</id>
+    <content type="html"><![CDATA[<p>I used Octopress to build my wife’s webcomic site <a href="http://www.shamseecomic.com">ShamseeComic</a> and learning how to optimize everything has been fun.</p>
+
+<p>Now that I’m starting on this site from scratch (with a better understanding of Jekyll) I figured I’d revisit my old method and update it.</p>
+
+<p>Below are the steps I took to add a few optimization tasks to my blank Rakefile. Here’s the tasks:</p>
+
+<ul>
+  <li>Minify all HTML and CSS when the site is built</li>
+  <li>Optimize all images when the site is built</li>
+  <li>Notify Google and Yahoo when the site is deployed
+    <ul>
+      <li>This one took me a bit, but I was trying to reproduce the ‘Ping Service’ that’s included in Wordpress</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="configyml">_config.yml</h3>
+<p>Jekyll 2.0+ has full Sass support so we can use it to minify our CSS when Jekyll builds the site, just by adding a couple of lines to our _config.yml.</p>
+
+<pre><code># Compress our CSS
+  sass:
+    style: :compressed
+</code></pre>
+
+<h3 id="gemfile">Gemfile</h3>
+
+<ul>
+  <li>First I add some gems to my Gemfile since they’re used for the minification and optimization<br />
+<code>
+gem 'mini_magick'
+gem 'html_compressor'
+</code></li>
+  <li>Then install the new Gems by running <code>bundle install --binstubs --path=vendor</code></li>
+  <li>Next I create a Rakefile with the following:</li>
+</ul>
+
+<pre><code>require "html_compressor"
+
+##############
+#   Build    #
+##############
+
+# Generate the site
+# Minify, optimize, and compress
+
+desc "build the site"
+task :build do
+  system "bundle exec jekyll build"
+  system "bundle exec rake minify_html"
+  system "bundle exec rake optimizeimages"
+end
+
+##############
+#   Deploy   #
+##############
+
+# Deploy the site
+# Ping / Notify after site is deployed
+
+desc "deploy the site"
+task :deploy do
+  system "bundle exec octopress deploy"
+  system "bundle exec rake notify"
+end
+
+##############
+# Optimizes  #
+##############
+
+# https://github.com/phobetron/image-optimizer 
+# Using this to optimize our images. Dependencies are jpegtran, pngcrush and gifsicle
+
+desc "Optimize GIF, JPG and PNG files"
+task :optimizeimages =&gt; [ 'optimizeimages:find_tools', 'optimizeimages:run' ]
+
+namespace :optimizeimages do
+  desc "Test for presence of image optimization tools in the command path"
+  task :find_tools do
+    RakeFileUtils.verbose(false)
+    tools = %w[jpegtran gifsicle pngcrush]
+    puts "\nOptimizing images using the following tools:"
+    tools.delete_if { |tool| sh('which', tool) rescue false }
+    raise "The following tools must be installed and accessible from the execution path: #{ tools.join(', ') }" if tools.size &gt; 0
+  end
+
+  task :run do
+    RakeFileUtils.verbose(false)
+    start_time = Time.now
+
+    file_list = FileList.new '_site/**/*.{gif,jpeg,jpg,png}'
+
+    last_optimized_path = '_site/.last_optimized'
+    if File.exists? last_optimized_path
+      last_optimized = File.new last_optimized_path
+      file_list.exclude do |f|
+        File.new(f).mtime &lt; last_optimized.mtime
+      end
+    end
+
+    puts "\nOptimizing #{ file_list.size } image files."
+
+    proc_cnt = 0
+    skip_cnt = 0
+    savings = {:old =&gt; Array.new, :new =&gt; Array.new}
+
+    file_list.each_with_index do |f, cnt|
+      puts "Processing: #{cnt+1}/#{file_list.size} #{f.to_s}"
+
+      extension = File.extname(f).delete('.').gsub(/jpeg/,'jpg')
+      ext_check = `file -b #{f} | awk '{print $1}'`.strip.downcase
+      ext_check.gsub!(/jpeg/,'jpg')
+      if ext_check != extension
+        puts "\t#{f.to_s} is a: '#{ext_check}' not: '#{extension}' ..skipping"
+        skip_cnt = skip_cnt + 1
+        next
+      end
+
+      case extension
+      when 'gif'
+        `gifsicle -O2 #{f} &gt; #{f}.n`
+      when 'png'
+        `pngcrush -q -rem alla -reduce -brute  #{f} #{f}.n`
+      when 'jpg'
+        `jpegtran -copy none -optimize -perfect -progressive #{f} &gt; #{f}.p`
+        prog_size = File.size?("#{f}.p")
+
+        `jpegtran -copy none -optimize -perfect #{f} &gt; #{f}.np`
+        nonprog_size = File.size?("#{f}.np")
+
+        if prog_size &lt; nonprog_size
+          File.delete("#{f}.np")
+          File.rename("#{f}.p", "#{f}.n")
+        else
+          File.delete("#{f}.p")
+          File.rename("#{f}.np", "#{f}.n")
+        end
+      else
+        skip_cnt = skip_cnt + 1
+        next
+      end
+
+      old_size = File.size?(f).to_f
+      new_size = File.size?("#{f}.n").to_f
+
+      if new_size &lt; old_size
+        File.delete(f)
+        File.rename("#{f}.n", f)
+      else
+        new_size = old_size
+        File.delete("#{f}.n")
+      end
+
+      savings[:old] &lt;&lt; old_size
+      savings[:new] &lt;&lt; new_size
+
+      reduction = 100.0 - (new_size/old_size*100.0)
+
+      puts "Output: #{sprintf "%0.2f", reduction}% | #{old_size.to_i} -&gt; #{new_size.to_i}"
+      proc_cnt = proc_cnt + 1
+    end
+
+    total_old = savings[:old].inject(0){|sum,item| sum + item}
+    total_new = savings[:new].inject(0){|sum,item| sum + item}
+    total_reduction = total_old &gt; 0 ? (100.0 - (total_new/total_old*100.0)) : 0
+
+    minutes, seconds = (Time.now - start_time).divmod 60
+    puts "\nTotal run time: #{minutes}m #{seconds.round}s"
+
+    puts "Files: #{file_list.size}\tProcessed: #{proc_cnt}\tSkipped: #{skip_cnt}"
+    puts "\nTotal savings:\t#{sprintf "%0.2f", total_reduction}% | #{total_old.to_i} -&gt; #{total_new.to_i} (#{total_old.to_i - total_new.to_i})"
+
+    FileUtils.touch last_optimized_path
+  end
+end
+
+##############
+#   Minify   #
+##############
+
+desc "Minify HTML"
+task :minify_html do
+  puts "## Minifying HTML"
+  compressor = HtmlCompressor::HtmlCompressor.new
+  Dir.glob("_site/**/*.html").each do |name|
+    puts "Minifying #{name}"
+    input = File.read(name)
+    output = File.open("#{name}", "w")
+    output &lt;&lt; compressor.compress(input)
+    output.close
+  end
+end
+
+desc "Minify static assets"
+task :minify =&gt; [:minify_css, :minify_html] do
+end
+
+##############
+#   Notify   #
+##############
+
+# Ping Google and Yahoo to let them know you updated your site
+
+site = "www.chrisanthropic.com"
+
+desc 'Notify Google of the new sitemap'
+task :sitemapgoogle do
+  begin
+    require 'net/http'
+    require 'uri'
+    puts '* Pinging Google about our sitemap'
+    Net::HTTP.get('www.google.com', '/webmasters/tools/ping?sitemap=' + URI.escape('#{site}/sitemap.xml'))
+  rescue LoadError
+    puts '! Could not ping Google about our sitemap, because Net::HTTP or URI could not be found.'
+  end
+end
+
+desc 'Notify Bing of the new sitemap'
+task :sitemapbing do
+  begin
+    require 'net/http'
+    require 'uri'
+    puts '* Pinging Bing about our sitemap'
+    Net::HTTP.get('www.bing.com', '/webmaster/ping.aspx?siteMap=' + URI.escape('#{site}/sitemap.xml'))
+  rescue LoadError
+    puts '! Could not ping Bing about our sitemap, because Net::HTTP or URI could not be found.'
+  end
+end
+
+desc "Notify various services about new content"
+task :notify =&gt; [:sitemapgoogle, :sitemapbing] do
+end
+</code></pre>
+<p>Now I build my site with the <code>bundle exec rake build</code> command and it automatically builds my site, minifies the assets, and optimizes all images.</p>
+
+<p>When I deploy my site with <code>bundle exec rake deploy</code> it deploys it to S3 and then notifies Google and Bing about my updated sitemap.xml file.</p>
+
+<p>Pretty cool.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mail Forwarding With Mailgun and CloudFlare]]></title>
+    <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/mail-forwarding-with-mailgun-and-cloudflare?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign=MailForwardingWithMailgunandCloudFlare"/>
+    <updated>2014-12-03T20:35:05-08:00</updated>
+    <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/mail-forwarding-with-mailgun-and-cloudflare</id>
+    <content type="html"><![CDATA[<p>After moving my DNS from Namecheap to CloudFlare I lost the ability to use Namecheap as a mail forwarder. For anyone not sure what that is, essentially it allows you to receive email at anyname@your-domain.com and have it automatically forwarded somewhere else (like your personal Gmail account).</p>
+
+<p>So, what I did is leverage a free account with <a href="https://mailgun.com/">Mailgun</a> to setup the same thing.</p>
+
+<h2 id="mailgun-setup">Mailgun Setup</h2>
+<ul>
+  <li>Create a Mailgun account</li>
+  <li>Add your domain name (no www)<br />
+<code>domain.com</code></li>
+  <li>Keep the page open and open a new tab to CloudFlare</li>
+</ul>
+
+<h2 id="cloudflare">Cloudflare</h2>
+<ul>
+  <li>Choose your site and select <code>DNS Settings</code></li>
+  <li>Add the two <code>Text</code> records</li>
+  <li>Add the <code>CNAME</code> record
+    <ul>
+      <li>Make sure the cloudflare cloud is gray and not orange/active</li>
+    </ul>
+  </li>
+  <li>Add the two <code>MX</code> records
+    <ul>
+      <li><strong>Name</strong> <code>domain.com</code> (no www)</li>
+      <li><strong>Mail handled by</strong> <code>mxa.mailgun.org</code> or <code>mxb.mailgun.org</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="back-at-mailgun">Back at Mailgun</h2>
+<ul>
+  <li>Click <code>add</code>
+    <ul>
+      <li>Click <code>Check DNS Records Now</code></li>
+    </ul>
+  </li>
+  <li>It’ll tell you once it detects the updated DNS records</li>
+</ul>
+
+<h2 id="email-forwarding">Email Forwarding</h2>
+<ul>
+  <li>From Mailgun, choose <code>Routes</code></li>
+  <li><code>Create Your First Route</code></li>
+  <li><strong>Priority</strong> 10</li>
+  <li><strong>Filter Expression</strong> This is where you list the email address you want to forward to gmail<br />
+<code>match_recipient("you@domain.com")</code></li>
+  <li><strong>Actions</strong> This is the gmail address you want to receive your mail<br />
+<code>forward("me@gmail.com")</code></li>
+  <li><strong>Description</strong> Name it something so you remember what it’s for</li>
+</ul>
+
+<h2 id="use-gmail-to-send-mail-from-your-domain">Use Gmail to send mail from your domain</h2>
+<ul>
+  <li>Log in to Gmail and go to <code>settings</code></li>
+  <li>Go to <code>Accounts and Import</code></li>
+  <li>Go to <code>Send mail as</code> and select <code>add another email you own</code>
+    <ul>
+      <li><strong>name:</strong> Anything you want</li>
+      <li><strong>email address:</strong> name@domain.com (this should be the email you set up in the steps before)</li>
+      <li>Leave <code>treat as an alias</code> checked</li>
+      <li>Click <code>Next Step</code></li>
+      <li>For the following info you’ll need to login to mailgun and use the info under <code>Domain Information</code></li>
+      <li><strong>SMTP Server</strong> Use <code>SMTP Hostname</code> from Mailgun</li>
+      <li><strong>Username</strong> Use <code>Default SMTP Login</code> from Mailgun</li>
+      <li><strong>Password</strong> Use <code>Default Password</code> from Mailgun</li>
+      <li>Leave <code>Secured connection using TLS</code> selected</li>
+      <li>Click add account</li>
+    </ul>
+  </li>
+  <li>Once it’s verified you should be able to compose emails and list your new email in the <code>from</code> line so nobody needs to know it’s coming from your personal gmail account.  </li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Moving From Github-Pages to S3]]></title>
+    <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/moving-from-github-pages-to-s3?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign=MovingFromGithub-PagestoS3"/>
+    <updated>2014-12-03T17:17:18-08:00</updated>
+    <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/moving-from-github-pages-to-s3</id>
+    <content type="html"><![CDATA[<p>I decided to move from free github-pages hosting to dirt cheap AWS S3 hosting. I also decided to move my DNS from namecheap to the free CloudFlare plan. Here’s the steps I took to transfer everything over.</p>
+
+<p>Most of the steps were adapted from here <a href="http://blog.mindthecloud.com/2014/08/31/create-your-static-blog-from-scratch-in-1-hour.html">http://blog.mindthecloud.com/2014/08/31/create-your-static-blog-from-scratch-in-1-hour.html</a></p>
+
+<h2 id="prepare-aws">Prepare AWS</h2>
+
+<ul>
+  <li>Login to AWS S3 and create a bucket called <code>www.YOURSITE.com</code> (This is important for CNAME/DNS record stuff)
+    <ul>
+      <li>Make sure you select the <code>US Standard</code> region</li>
+    </ul>
+  </li>
+  <li>Create a new policy for the bucket that gives everyone read-only access so they can view the site</li>
+</ul>
+
+<pre><code>{
+	"Version": "2008-10-17",
+	"Statement": [
+		{
+			"Sid": "AddPerm",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::NAME-OF-BUCKET/*"
+		}
+	]
+}
+</code></pre>
+
+<ul>
+  <li>Select the bucket you created and choose <code>options</code></li>
+  <li>Go to the <code>Static Website Hosting</code> tab and enable it.</li>
+  <li>Enter <code>index.html</code> for <code>index document</code> and <code>404.html</code> for <code>error document</code></li>
+  <li>Login to <a href="https://console.aws.amazon.com/iam">AWS IAM console</a></li>
+  <li>Create new user with full access to S3
+    <ul>
+      <li>Create new user</li>
+      <li>Choose <code>attach user policy</code></li>
+      <li>Choose <code>custom policy</code> and enter the following code:</li>
+    </ul>
+  </li>
+</ul>
+
+<pre><code>{
+  "Statement": [
+    {
+      "Action": [
+        "s3:*"
+      ],
+      "Effect": "Allow",
+      "Resource": [
+        "arn:aws:s3:::NAME-OF-BUCKET",
+        "arn:aws:s3:::NAME-OF-BUCKET/*"
+      ]
+    }
+  ]
+}
+</code></pre>
+
+<ul>
+  <li>The above policy gives the user you created full access to the bucket you created to host your site. This is the user that will be used to deploy your site.</li>
+</ul>
+
+<h2 id="setup-octopress-deploy">setup octopress-deploy</h2>
+
+<ul>
+  <li>run <code>octopress deploy init s3</code> to create default <code>deploy.yml</code> file</li>
+  <li>Enter the user credentials in the <code>deploy.yml</code> file</li>
+  <li>Run <code>octopress deploy</code></li>
+</ul>
+
+<h2 id="check-your-work">Check your work</h2>
+<ul>
+  <li>Go to AWS / S3, open your bucket, and choose <code>properties</code></li>
+  <li>There should be a link listed as <code>Endpoint</code>, go to that link and you should see your blog!</li>
+</ul>
+
+<h2 id="edit-namecheap-cname-record">Edit namecheap cname record</h2>
+<ul>
+  <li>All host records
+    <ul>
+      <li>@ points to <code>www.chrisanthropic.com</code> and is a <code>URL Redirect</code></li>
+      <li>hostname <code>www</code> points to bucket Endpoint (rather than github.io) and is a <code>CNAME (Alias)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="remove-github-site">Remove Github site</h2>
+<p>I deleted the github version so for now only the source lives there<br />
+  * Delete master or gh-pages branch so that only the source remains</p>
+
+<h2 id="use-cloudflare">Use Cloudflare</h2>
+<ul>
+  <li>Login to CloudFlare</li>
+  <li>add your domain
+    <ul>
+      <li>Your CNAME and A records should be listed and ‘active’</li>
+    </ul>
+  </li>
+  <li>Select the free plan, CDN only, and Medium security.</li>
+</ul>
+
+<h2 id="update-your-dns-records">Update your DNS Records</h2>
+<ul>
+  <li>Login to your DNS provider (I use Namecheap)</li>
+  <li>Remove all other DNS providers and add the two that CloudFlare told you to</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Add sitemap.xml to Jekyll]]></title>
+    <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/add-sitemap-xml-to-jekyll?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign=Addsitemap.xmltoJekyll"/>
+    <updated>2014-12-03T10:40:40-08:00</updated>
+    <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/add-sitemap-xml-to-jekyll</id>
+    <content type="html"><![CDATA[<p>I don’t like using plugins unless absolutely necessarry so I was happy to find a simple way to create a sitemap without one. The instructions are taken from this site: <a href="http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/">http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/</a></p>
+
+<ul>
+  <li>Create a <code>sitemap.xml</code> file with the following content:</li>
+</ul>
+
+<pre><code>
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  {% for post in site.posts %}
+    {% unless post.published == false %}
+    &lt;url&gt;
+      &lt;loc&gt;{{ site.url }}{{ post.url }}&lt;/loc&gt;
+      {% if post.sitemap.lastmod %}
+        &lt;lastmod&gt;{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}&lt;/lastmod&gt;
+      {% elsif post.date %}
+        &lt;lastmod&gt;{{ post.date | date_to_xmlschema }}&lt;/lastmod&gt;
+      {% else %}
+        &lt;lastmod&gt;{{ site.time | date_to_xmlschema }}&lt;/lastmod&gt;
+      {% endif %}
+      {% if post.sitemap.changefreq %}
+        &lt;changefreq&gt;{{ post.sitemap.changefreq }}&lt;/changefreq&gt;
+      {% else %}
+        &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+      {% endif %}
+      {% if post.sitemap.priority %}
+        &lt;priority&gt;{{ post.sitemap.priority }}&lt;/priority&gt;
+      {% else %}
+        &lt;priority&gt;0.5&lt;/priority&gt;
+      {% endif %}
+    &lt;/url&gt;
+    {% endunless %}
+  {% endfor %}
+  {% for page in site.pages %}
+    {% unless page.sitemap.exclude == "yes" %}
+    &lt;url&gt;
+      &lt;loc&gt;{{ site.url }}{{ page.url | remove: "index.html" }}&lt;/loc&gt;
+      {% if page.sitemap.lastmod %}
+        &lt;lastmod&gt;{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}&lt;/lastmod&gt;
+      {% elsif page.date %}
+        &lt;lastmod&gt;{{ page.date | date_to_xmlschema }}&lt;/lastmod&gt;
+      {% else %}
+        &lt;lastmod&gt;{{ site.time | date_to_xmlschema }}&lt;/lastmod&gt;
+      {% endif %}
+      {% if page.sitemap.changefreq %}
+        &lt;changefreq&gt;{{ page.sitemap.changefreq }}&lt;/changefreq&gt;
+      {% else %}
+        &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+      {% endif %}
+      {% if page.sitemap.priority %}
+        &lt;priority&gt;{{ page.sitemap.priority }}&lt;/priority&gt;
+      {% else %}
+        &lt;priority&gt;0.3&lt;/priority&gt;
+      {% endif %}
+    &lt;/url&gt;
+    {% endunless %}
+  {% endfor %}
+&lt;/urlset&gt;
+
+</code></pre>
+
+<ul>
+  <li>Add the following configurable settings to your templates:</li>
+</ul>
+
+<pre><code>sitemap:
+  lastmod: 
+  priority: 0.5
+  changefreq: monthly
+  exclude: 'no'
+</code></pre>
+
+<ul>
+  <li>More info on the settings can be found at <a href="http://www.sitemaps.org/protocol.html">sitemaps.org</a> but basically
+    <ul>
+      <li><strong>lastmod</strong> - lists the last time the page/post was modified</li>
+      <li><strong>priority</strong> - tells web crawlers how <em>you</em> prioritize the page/post on a scale of 0.0 -1.0. 0.5 is default.</li>
+      <li><strong>changefreq</strong> - a guideline for the webcrawler about how often the page/post likely changes (always, hourly, daily, weekly, monthly, yearly, never)</li>
+      <li><strong>exclude</strong> - yes/no wether you want the page/post included in the sitemap.</li>
+    </ul>
+  </li>
+  <li>Sitemaps.org is very clear that web crawlers use the data as <em>hints</em> rather than commands so keep that in mind. </li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Adding Google Analytics to Octopress 3.0]]></title>
+    <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/adding-google-analytics-to-octopress-3-0?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign=AddingGoogleAnalyticstoOctopress3.0"/>
+    <updated>2014-12-02T19:38:10-08:00</updated>
+    <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/adding-google-analytics-to-octopress-3-0</id>
+    <content type="html"><![CDATA[<h3 id="create-the-analytics-code">Create the analytics code</h3>
+<ul>
+  <li>Create a file called <code>google_analytics.html</code> in your <code>_includes</code> directory and paste the following code into it:</li>
+</ul>
+
+<pre><code>
+    {% if site.google_universal_analytics %}
+    &lt;script&gt;
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '{{ site.google_universal_analytics }}', '{{ site.google_universal_analytics_cookiedomain }}');
+      ga('send', 'pageview');
+    &lt;/script&gt;
+    {% endif %}
+
+</code></pre>
+<ul>
+  <li>Add the following code to your <code>_includes/head.html</code> file just before <code>&lt;/head&gt;</code>:</li>
+</ul>
+
+<pre><code>
+{% include google_analytics.html %}
+
+</code></pre>
+
+<ul>
+  <li>Add this code to your _config.yml</li>
+</ul>
+
+<pre><code>google_universal_analytics: YOUR-TRACKING-ID
+google_universal_analytics_cookiedomain: auto
+</code></pre>
+<ul>
+  <li>Replace <code>YOUR-TRACKING-ID</code> with your actual tracking ID.</li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>

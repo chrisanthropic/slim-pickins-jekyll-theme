@@ -402,6 +402,9 @@ pre {
   margin-left: auto;
   margin-right: auto; }
 
+@media screen and (max-width: 768px) {
+  .wrap {
+    margin-bottom: -151.2px; } }
 .wrap:after {
   content: "";
   display: block; }
@@ -447,9 +450,31 @@ pre {
 .site-footer {
   background: #676767; }
 
+@media screen and (max-width: 768px) {
+  .site-footer, .wrap:after {
+    height: 151.2px; } }
 .center {
   display: block;
   margin: 0 auto; }
+
+.blocky {
+  position: relative;
+  overflow: hidden; }
+
+.center-text {
+  text-align: center; }
+
+@media screen and (min-width: 481px) {
+  .hide-for-large {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  .hide-for-small {
+    display: none; } }
+.schedule {
+  background-color: #76a6a6; }
+
+.pad-lr-15 {
+  padding: 0 15px; }
 
 meta.foundation-version {
   font-family: "/5.4.7/"; }
