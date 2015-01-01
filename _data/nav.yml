@@ -31,3 +31,6 @@
       subhref: "/documentation/deploy.html"
     - subtitle: "basic use"
       subhref: "/documentation/use.html"
+      
+- title: "external"
+  external: "http://www.jekyllrb.com"
