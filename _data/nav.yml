@@ -20,6 +20,8 @@
       subhref: "/documentation/rakefile.html"
     - subtitle: "image_optim"
       subhref: "/documentation/image-optim.html"
+    - subtitle: "SEO"
+      subhref: "/documentation/seo.html"
 
 - title: "use"
   subcategories:
