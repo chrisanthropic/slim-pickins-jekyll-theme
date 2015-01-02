@@ -8,13 +8,14 @@ Slim Pickins is what I consider to be a minimal 'core' theme with everything I n
 ## Basic features include:
 
 * SASS
-* Responsive grid
+* Responsive grid (Zurb Foundation)
 * Responsive navigation
 * Optional full-width banner
 * Sticky footer
 * **Javascript free**
 * Custom Rakefile with tasks for deploying, minifying, and notifying search engines about updates
 * image_optim plugin to optimize all images
+* Basic SEO
 
 ### SASS
 Includes the following variables:
@@ -61,8 +62,6 @@ Includes the following variables:
 Uses minimal sass [components](https://github.com/zurb/bower-foundation/tree/master/scss/foundation/components) from Zurb Foundation:
 
 * [grid](http://foundation.zurb.com/docs/components/grid.html)
-* [visibility](http://foundation.zurb.com/docs/components/visibility.html)
-* [media query](http://foundation.zurb.com/docs/media-queries.html)
 
 ### NAVIGATION
 A fully responsive navigation bar with the following features:
@@ -71,6 +70,7 @@ A fully responsive navigation bar with the following features:
   * Left - Primary navigation 
   * Right - Social media links
 * Both navigation areas are populated using Jekyll 'data' files, nav.yml and socials.yml respectively
+* Ability to create 'external' links that link offsite while still using socials.yml to do so
 * Easily customizable text, link, and background colors using the supplied sass variables
 
 ### BANNER
@@ -109,6 +109,44 @@ These tasks have been bundled into custom build and deploy tasks
   * Uses the original [image_optim](https://github.com/toy/image_optim)
 * Cache file is created on the first run so that only updated/new images are optimized
 
+### BASIC SEO
+
+* Google Analytics*
+  * *Uses Javascript
+  * just add your `google_universal_analytics ID` to the _config.yml file.
+* Facebook Open Graph
+  Fill out the following in your config.yml
+
+  ```
+    facebook_app_id:                      #enter your App ID
+    facebook_locale: en_US
+    facebook_page:                        #the URL of your Facebook Page
+    facebook_image:			#enter a default image (at least 200x200px) to use here for posts/pages that don't have one.	
+  ```
+
+* Twitter Cards
+  Fill out the following in your config.yml
+
+  ```
+    twitter_user: 
+    twitter_card: true
+    twitter_image: 			 #enter a default image (at least 200x200px) to use here for posts/pages that don't have one.
+  ```
+
+* Sitewide description/keywords
+  * Edit the description in your config.yml and it will be used as the default description in the metadata for every page/post.
+  * Add `Keywords: some, bunch, of random keywords` to your config.yml and it will be used as the default keywords in the metadata for every post/page.
+  * Set specific keywords per page/post (override the sitewide defaults) by adding them to the front matter of any page/post.
+    * Example:
+
+```
+---
+Title: Example Post
+Description: Some Yaml Frontmatter to show what's what.
+Keywords: Example, Zim, this is only a test
+---
+```
+
 ## Basic Use
 For now it's best to start fresh or install the them and then transfer over any old files (posts, images, etc) from your old site.
 
@@ -119,7 +157,6 @@ For now it's best to start fresh or install the them and then transfer over any 
   * edit the `_data/nav.yml` file as needed
 * Update your social links
   * edit the `_data/socials.yml` file as needed
-* For google analytics just add your google_universal_analytics ID to the _config.yml file.
 
 ## Deploying
 I use S3 to host my site and the [s3_website](https://github.com/laurilehmijoki/s3_website) plugin to deploy, if you don't do both of these, delete the `s3_website.yml` file and edit the deploy raketask to fit your needs.
