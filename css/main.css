@@ -452,7 +452,10 @@ pre {
 
 @media screen and (max-width: 768px) {
   .site-footer, .wrap:after {
-    height: 151.2px; } }
+    height: 151.2px; }
+
+  .recent-posts ul li {
+    margin-bottom: 2em; } }
 .center {
   display: block;
   margin: 0 auto; }
