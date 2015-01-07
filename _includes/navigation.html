@@ -19,10 +19,10 @@
 		{% elsif nav.title == page.title %}
 		  <li class="active"><a href="{{ nav.href }}">{{ nav.title }}</a></li>
 		{% else %}
-		  {% if nav.href != null %}
+		  {% if nav.href %}
 		  <li><a href="{{ site.baseurl }}{{ nav.href }}">{{ nav.title }}</a></li>
-		  {% else %}
-		  <li><a href="{{ nav.external }}">{{ nav.title }}</a></li>
+		    {% elsif nav.external %}
+		    <li><a href="{{ nav.external }}">{{ nav.title }}</a></li>
 		  {% endif %}
 	  {% endif %}
 	{% endfor %}
