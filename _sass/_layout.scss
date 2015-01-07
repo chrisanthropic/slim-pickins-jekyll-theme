@@ -83,4 +83,8 @@
   .site-footer, .wrap:after {
     height: $footer-height * 2.8; 
   }
+  
+  .recent-posts ul li {
+    margin-bottom: 2em;
+  }
 }
