@@ -36,3 +36,10 @@
       
 - title: "external"
   external: "http://www.jekyllrb.com"
+  
+- title: "Misc"
+  external-subcategories:
+    - subtitle: "Jekyll forums"
+      subhref: "https://talk.jekyllrb.com/"
+    - subtitle: "Source Code"
+      subhref: "https://github.com/chrisanthropic/slim-pickins-jekyll-theme"
