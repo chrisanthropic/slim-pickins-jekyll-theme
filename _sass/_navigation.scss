@@ -88,6 +88,7 @@
 
 // Submenus
 #nav .primary-nav ul {
+	z-index: auto;
 	display: block;
 	position: absolute;
 	top: $navbar-height;
