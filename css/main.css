@@ -65,6 +65,7 @@
   top: 22px; }
 
 #nav .primary-nav ul {
+  z-index: auto;
   display: block;
   position: absolute;
   top: 44px;
