@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem 'jekyll', '~> 2.5.2'	#Needed since this is a theme for Jekyll
+gem 'jekyll', '~> 2.5.3'	#Needed since this is a theme for Jekyll
 gem 'jekyll-sitemap'
 gem 'rake' 			#Used to simplify building/deploying tasks
 gem 's3_website'		#Used to deploy site to AWS S3
