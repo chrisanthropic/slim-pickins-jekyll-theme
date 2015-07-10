@@ -6,8 +6,8 @@ keywords: jekyll, jekyll theme, jekyll framework, stuffthings
 description: > # this means to ignore newlines until "baseurl:"
   Witty description here.
 
-baseurl: https://chrisanthropic.github.io/slim-pickins-jekyll-theme
-url: / #Leave this, change the baseurl.
+baseurl: /slim-pickins-jekyll-theme
+url: https://chrisanthropic.github.io
 
 header: yes
 header_sm: images/banner-small.jpg
@@ -27,6 +27,13 @@ kramdown:
 
 destination: _site
 
+gems:
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: atom.xml
+  
 # Compress our Css
 #sass:
 #    style: :compressed
