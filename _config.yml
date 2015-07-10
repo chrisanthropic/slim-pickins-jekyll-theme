@@ -1,6 +1,7 @@
 # Site settings
-title: Slim Pickins Jekyll Theme
+name: Slim Pickins Jekyll Theme
 email: 
+author: Chrisanthropic
 
 keywords: jekyll, jekyll theme, jekyll framework, stuffthings
 description: > # this means to ignore newlines until "baseurl:"
