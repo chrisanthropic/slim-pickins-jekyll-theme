@@ -29,6 +29,10 @@ destination: _site
 
 gems:
   - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: atom.xml
   
 # Compress our Css
 #sass:
