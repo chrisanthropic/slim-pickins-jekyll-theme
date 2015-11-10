@@ -29,7 +29,6 @@ kramdown:
 destination: _site
 
 gems:
-  - jekyll-sitemap
   - jekyll-feed
 
 feed:
