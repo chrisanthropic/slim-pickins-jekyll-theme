@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-<generator uri="http://jekyllrb.com" version="2.5.3">Jekyll</generator>
+<generator uri="http://jekyllrb.com" version="3.0.0">Jekyll</generator>
 <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/atom.xml" rel="self" type="application/atom+xml" />
 <link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/" rel="alternate" type="text/html" />
-<updated>2015-07-10T12:03:20-07:00</updated>
+<updated>2015-11-09T17:50:03-08:00</updated>
 <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/</id>
 <title>Slim Pickins Jekyll Theme</title>
 <subtitle>Witty description here.
@@ -13,11 +13,11 @@
 </author>
 <entry>
 <title>Using _data to Build Jekyll Navigation</title>
-<link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-_data-to-build-jekyll-navigation" rel="alternate" type="text/html" title="Using _data to Build Jekyll Navigation" />
+<link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-data-to-build-jekyll-navigation" rel="alternate" type="text/html" title="Using _data to Build Jekyll Navigation" />
 <published>2014-12-09T19:34:33-08:00</published>
 <updated>2014-12-09T19:34:33-08:00</updated>
 <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-_data-to-build-jekyll-navigation</id>
-<content type="html" xml:base="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-_data-to-build-jekyll-navigation">&lt;p&gt;I wanted an easy way to create my navigation menus and I found a great post &lt;a href=&quot;http://www.tournemille.com/blog/How-to-create-data-driven-navigation-in-Jekyll/&quot;&gt;here&lt;/a&gt; on using the new-ish ‘data’ feature of Jekyll.&lt;/p&gt;
+<content type="html" xml:base="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-data-to-build-jekyll-navigation">&lt;p&gt;I wanted an easy way to create my navigation menus and I found a great post &lt;a href=&quot;http://www.tournemille.com/blog/How-to-create-data-driven-navigation-in-Jekyll/&quot;&gt;here&lt;/a&gt; on using the new-ish ‘data’ feature of Jekyll.&lt;/p&gt;
 
 &lt;p&gt;What this allows us to do is centralize our navigation setup (pages and subpages) so any changes are kept out of our actual layout code.&lt;/p&gt;
 
@@ -298,11 +298,11 @@ Running &lt;code&gt;bundle exec rake build&lt;/code&gt; will then run &lt;code&g
 </entry>
 <entry>
 <title>Deploy Jekyll to S3 With S3_website</title>
-<link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3_website" rel="alternate" type="text/html" title="Deploy Jekyll to S3 With S3_website" />
+<link href="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3-website" rel="alternate" type="text/html" title="Deploy Jekyll to S3 With S3_website" />
 <published>2014-12-05T11:01:42-08:00</published>
 <updated>2014-12-05T11:01:42-08:00</updated>
 <id>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3_website</id>
-<content type="html" xml:base="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3_website">&lt;p&gt;I’d originally set this up to deploy to S3 using the new-ish Octopress-Deploy gem but after using it a bit I’ve found that it’s still too rough to be my goto.&lt;/p&gt;
+<content type="html" xml:base="https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3-website">&lt;p&gt;I’d originally set this up to deploy to S3 using the new-ish Octopress-Deploy gem but after using it a bit I’ve found that it’s still too rough to be my goto.&lt;/p&gt;
 
 &lt;p&gt;The main benefits of switching to S3_website are:&lt;/p&gt;
 
