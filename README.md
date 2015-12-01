@@ -7,6 +7,7 @@ Slim Pickins is what I consider to be a minimal 'core' theme with everything I n
 
 ## Basic features include:
 
+* Jekyll 3.0 compatible
 * SASS
 * Responsive grid (Zurb Foundation)
 * Responsive navigation
