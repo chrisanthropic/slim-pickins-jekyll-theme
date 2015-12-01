@@ -1,0 +1,82 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    POpen4 (0.1.4)
+      Platform (>= 0.4.0)
+      open4
+    Platform (0.4.0)
+    colorator (0.1)
+    colored (1.2)
+    configure-s3-website (1.7.1)
+      deep_merge (= 1.0.0)
+    deep_merge (1.0.0)
+    dotenv (1.0.2)
+    exifr (1.2.3.1)
+    ffi (1.9.10)
+    fspath (2.1.1)
+    html_compressor (0.0.3)
+      POpen4 (>= 0.1.4)
+    image_optim (0.21.0)
+      exifr (~> 1.2, >= 1.2.2)
+      fspath (~> 2.1)
+      image_size (~> 1.3)
+      in_threads (~> 1.3)
+      progress (~> 3.0, >= 3.0.1)
+    image_optim_pack (0.2.1.20151012)
+      fspath (~> 2.1)
+      image_optim (~> 0.19)
+    image_size (1.4.1)
+    in_threads (1.3.1)
+    jekyll (3.0.0)
+      colorator (~> 0.1)
+      jekyll-sass-converter (~> 1.0)
+      jekyll-watch (~> 1.1)
+      kramdown (~> 1.3)
+      liquid (~> 3.0)
+      mercenary (~> 0.3.3)
+      rouge (~> 1.7)
+      safe_yaml (~> 1.0)
+    jekyll-feed (0.3.1)
+    jekyll-sass-converter (1.3.0)
+      sass (~> 3.2)
+    jekyll-watch (1.3.0)
+      listen (~> 3.0)
+    kramdown (1.9.0)
+    liquid (3.0.6)
+    listen (3.0.4)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
+    mercenary (0.3.5)
+    mini_magick (4.3.6)
+    open4 (1.3.4)
+    progress (3.1.0)
+    rake (10.4.2)
+    rb-fsevent (0.9.6)
+    rb-inotify (0.9.5)
+      ffi (>= 0.5.0)
+    rouge (1.10.1)
+    s3_website (2.12.2)
+      colored (= 1.2)
+      configure-s3-website (= 1.7.1)
+      dotenv (~> 1.0)
+      thor (~> 0.18)
+    safe_yaml (1.0.4)
+    sass (3.2.19)
+    thor (0.19.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  html_compressor
+  image_optim
+  image_optim_pack
+  jekyll
+  jekyll-feed
+  mini_magick
+  rake
+  s3_website
+  sass (~> 3.2.19)
+
+BUNDLED WITH
+   1.10.6
