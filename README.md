@@ -62,9 +62,9 @@ Includes the following variables:
 * $footer-color
 
 ### GRID
-Uses minimal sass [components](https://github.com/zurb/bower-foundation/tree/master/scss/foundation/components) from Zurb Foundation:
+Uses minimal sass from Zurb Foundation:
 
-* [grid](http://foundation.zurb.com/docs/components/grid.html)
+* [grid](http://foundation.zurb.com/sites/docs/grid.html)
 
 ### NAVIGATION
 A fully responsive navigation bar with the following features:
