@@ -3,7 +3,7 @@
   
   
   <url>
-    <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-data-to-build-jekyll-navigation</loc>
+    <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-_data-to-build-jekyll-navigation</loc>
     
     <lastmod>2014-12-09T19:34:33-08:00</lastmod>
     
@@ -31,7 +31,7 @@
   </url>
   
   <url>
-    <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3-website</loc>
+    <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3_website</loc>
     
     <lastmod>2014-12-05T11:01:42-08:00</lastmod>
     
@@ -213,7 +213,7 @@
     </url>
   
     <url>
-      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3-website</loc>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/deploy-jekyll-to-s3-with-s3_website</loc>
       
     </url>
   
@@ -233,7 +233,7 @@
     </url>
   
     <url>
-      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-data-to-build-jekyll-navigation</loc>
+      <loc>https://chrisanthropic.github.io/slim-pickins-jekyll-theme/blog/2014/using-_data-to-build-jekyll-navigation</loc>
       
     </url>
   
