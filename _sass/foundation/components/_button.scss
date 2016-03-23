@@ -12,7 +12,7 @@ $button-padding: 0.85em 1em !default;
 
 /// Margin around buttons.
 /// @type List
-$button-margin: 0 $global-margin $global-margin 0 !default;
+$button-margin: 0 0 $global-margin 0 !default;
 
 /// Default fill for buttons. Can either be `solid` or `hollow`.
 /// @type Keyword
@@ -28,11 +28,11 @@ $button-background-hover: scale-color($button-background, $lightness: -15%) !def
 
 /// Font color for buttons.
 /// @type List
-$button-color: #fff !default;
+$button-color: $white !default;
 
 /// Font color for buttons, if the background is light.
 /// @type List
-$button-color-alt: #000 !default;
+$button-color-alt: $black !default;
 
 /// Border radius for buttons, defaulted to global-radius.
 /// @type Number
@@ -64,7 +64,7 @@ $button-opacity-disabled: 0.25 !default;
   line-height: 1;
   cursor: pointer;
   -webkit-appearance: none;
-  transition: all 0.25s ease-out;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
   vertical-align: middle;
   border: 1px solid transparent;
   border-radius: $button-radius;
@@ -99,25 +99,18 @@ $button-opacity-disabled: 0.25 !default;
   $color: $button-color
 ) {
   @if $color == auto {
-    $color: isitlight($background);
+    $color: foreground($background);
   }
 
   @if $background-hover == auto {
     $background-hover: scale-color($background, $lightness: -20%);
   }
 
-  @if lightness($background) >= 70% {
-    $color: $button-color-alt;
-  }
-  @else {
-    $color: $button-color;
-  }
-
-  background: $background;
+  background-color: $background;
   color: $color;
 
   &:hover, &:focus {
-    background: $background-hover;
+    background-color: $background-hover;
     color: $color;
   }
 }
@@ -126,7 +119,7 @@ $button-opacity-disabled: 0.25 !default;
 @mixin button-hollow {
   &,
   &:hover, &:focus {
-    background: transparent;
+    background-color: transparent;
   }
 }
 
@@ -201,13 +194,16 @@ $button-opacity-disabled: 0.25 !default;
     @include button;
 
     // Sizes
-    &.tiny     { font-size: map-get($button-sizes, tiny); }
-    &.small    { font-size: map-get($button-sizes, small); }
-    &.large    { font-size: map-get($button-sizes, large); }
+    @each $size, $value in map-remove($button-sizes, default) {
+      &.#{$size} {
+        font-size: $value;
+      }
+    }
+
     &.expanded { @include button-expand; }
 
     // Colors
-    @each $name, $color in $foundation-colors {
+    @each $name, $color in $foundation-palette {
       @if $button-fill != hollow {
         &.#{$name} {
           @include button-style($color, auto);
@@ -230,7 +226,7 @@ $button-opacity-disabled: 0.25 !default;
         @include button-hollow;
         @include button-hollow-style;
 
-        @each $name, $color in $foundation-colors {
+        @each $name, $color in $foundation-palette {
           &.#{$name} {
             @include button-hollow-style($color);
           }
@@ -239,7 +235,8 @@ $button-opacity-disabled: 0.25 !default;
     }
 
     // Disabled style
-    &.disabled {
+    &.disabled,
+    &[disabled] {
       @include button-disabled;
     }
 
@@ -258,7 +255,7 @@ $button-opacity-disabled: 0.25 !default;
     &.arrow-only::after {
       margin-#{$global-left}: 0;
       float: none;
-      top: 0.2em;
+      top: -0.1em;
     }
   }
 }

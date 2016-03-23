@@ -27,10 +27,11 @@
 }
 
 /// Reset a position definition.
-@mixin grid-column-unposition() {
+@mixin grid-column-unposition {
   position: static;
   margin-left: 0;
   margin-right: 0;
+  float: left;
 }
 
 /// Offsets a column to the right by `$n` columns.
@@ -40,9 +41,9 @@
 }
 
 /// Disable the default behavior of the last column in a row aligning to the opposite edge.
-@mixin grid-column-end() {
+@mixin grid-column-end {
   // This extra specificity is required for the property to be applied
-  &:last-child {
+  &:last-child:last-child {
     float: $global-left;
   }
 }
@@ -55,7 +56,7 @@
 
 /// Shorthand for `grid-column-unposition()`.
 /// @alias grid-column-unposition
-@mixin grid-col-unpos() {
+@mixin grid-col-unpos {
   @include grid-column-unposition;
 }
 
@@ -67,6 +68,6 @@
 
 /// Shorthand for `grid-column-end()`.
 /// @alias grid-column-end
-@mixin grid-col-end() {
+@mixin grid-col-end {
   @include grid-column-end;
 }
