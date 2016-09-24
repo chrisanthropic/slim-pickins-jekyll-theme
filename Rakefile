@@ -1,5 +1,3 @@
-require "html_compressor"
-
 ##############
 #   Build    #
 ##############
@@ -10,7 +8,6 @@ require "html_compressor"
 desc "build the site"
 task :build do
   system "bundle exec jekyll build --incremental"
-  system "bundle exec rake minify_html" #Minify our HTML
 end
 
 ##############
@@ -36,23 +33,6 @@ desc "deploy the site"
 task :deploy do
   system "bundle exec s3_website push"
   system "bundle exec rake notify" #ping google/bing about our sitemap updates
-end
-
-##############
-#   Minify   #
-##############
-
-desc "Minify HTML"
-task :minify_html do
-  puts "## Minifying HTML"
-  compressor = HtmlCompressor::HtmlCompressor.new
-  Dir.glob("_site/**/*.html").each do |name|
-    puts "Minifying #{name}"
-    input = File.read(name)
-    output = File.open("#{name}", "w")
-    output << compressor.compress(input)
-    output.close
-  end
 end
 
 ##############
