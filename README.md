@@ -16,7 +16,7 @@ Slim Pickins is what I consider to be a minimal 'core' theme with everything I n
 * Optional full-width banner
 * Sticky footer
 * **Javascript free**
-* Custom Rakefile with tasks for deploying, minifying, and notifying search engines about updates
+* Custom Rakefile with tasks for deploying and notifying search engines about updates
 * image_optim plugin to optimize all images
 * Basic SEO
 
@@ -98,7 +98,6 @@ The only thing in the theme that uses Javascript is the optional use of google a
 ### RAKEFILE
 Includes the following custom tasks:
 
-* *minify_html* - uses HTML_compressor to minify HTML
 * *notify* - pings google and bing to notify them about changes to the site/sitemap
 
 These tasks have been bundled into custom build and deploy tasks
