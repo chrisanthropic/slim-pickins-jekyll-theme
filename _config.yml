@@ -4,11 +4,11 @@ email:
 author: Chrisanthropic
 
 keywords: jekyll, jekyll theme, jekyll framework, stuffthings
-description: > # this means to ignore newlines until "baseurl:"
-  Witty description here.
+description: Witty description here.
 
-baseurl: /slim-pickins-jekyll-theme
-url: https://chrisanthropic.github.io
+# Only use this if you are serving your site via Github Pages
+github:
+  url: "https://chrisanthropic.github.io/slim-pickins-jekyll-theme"
 
 header: yes
 header_sm: images/banner-small.jpg
