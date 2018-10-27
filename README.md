@@ -1,6 +1,10 @@
 slim-pickins-jekyll-theme
 =============
 
+## NOTICE
+This repo is no longer maintained. I'm happy to approve pull requests but I'm not personally working on this theme any longer, it has been replaced by my [Slim Pickins Hugo Theme](https://github.com/chrisanthropic/slim-pickins-hugo-theme)
+------------------
+
 Live Demo [HERE](http://chrisanthropic.github.io/slim-pickins-jekyll-theme/)
 
 Slim Pickins is what I consider to be a minimal 'core' theme with everything I need to quickly develop new themes for Jekyll.
