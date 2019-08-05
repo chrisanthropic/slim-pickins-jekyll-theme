@@ -1,14 +1,13 @@
 - title: "home"
-  href: "/eDNA/"
+  href: "/"
 
 - title: "Notebook"
-  href: "/eDNA/Notebook/"
+  href: "/Notebook/"
 
 - title: "Sampling"
   subcategories:
     - subtitle: "2019"
-      subhref: "eDNA/Sampling/2019"
-      
+      subhref: "/Sampling/2019"
+
 - title: "Lab-Website"
   external: "https://www.carlosprada.org/"
-  
