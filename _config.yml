@@ -1,14 +1,14 @@
 # Site settings
-name: Slim Pickins Jekyll Theme
+name: NB eDNA
 email: 
-author: Chrisanthropic
+author: Prada Lab
 
-keywords: jekyll, jekyll theme, jekyll framework, stuffthings
-description: Witty description here.
+keywords: eDNA
+description: Repository and Site for the Prada Lab's eDNA Project
 
 # Only use this if you are serving your site via Github Pages
 github:
-  url: "https://chrisanthropic.github.io/slim-pickins-jekyll-theme"
+  url: "https://meschedl.github.io/eDNA"
 
 header: yes
 header_sm: images/banner-small.jpg
@@ -54,5 +54,5 @@ facebook_image:                       #enter a default image (at least 200x200px
 
 # Twitter Cards
 twitter_user: 
-twitter_card: true
+twitter_card: false
 twitter_image:                        #enter a default image (at least 200x200px) to use here for posts/pages that don't have one.
