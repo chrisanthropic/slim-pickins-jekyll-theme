@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Test Sampling Locations and Extractions
-tags: [ Extraction ]
+tags:  Extraction 
 ---
 
 ### Sampling 2 locations to use a test sites for testing a [variety of PCR primers](https://github.com/meschedl/Narragansett_Bay_eDNA/blob/master/test_primers.csv) and extracting from those filters
