@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name=viewport content="width=device-width, initial-scale=1">
-  
+
   <title>{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
   {% if site.author %}
     <meta name="author" content="{{ site.author }}">
@@ -14,12 +14,17 @@
   {%else%}
     <meta name="keywords" content="{{ site.keywords }}">
   {% endif %}
-    
+
   <link href="{{ site.github.url }}/css/main.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link rel="canonical" href="{{ site.github.url }}{{ page.url }}">
   <link href="{{ site.github.url }}/favicon.ico" rel="icon">
   <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="{{ site.github.url }}/atom.xml"/>
-  
+
   {% include metadata.html %}
-  {% include google_analytics.html %} 
+  {% include google_analytics.html %}
+
+  {% if site.tags != "" %}
+  {% include collecttags.html %}
+{% endif %}
+
 </head>
