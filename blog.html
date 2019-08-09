@@ -3,18 +3,18 @@ layout: page
 title: Notebook
 permalink: /Notebook/
 ---
+<div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h2>
+          <a class="post-link" href="{{ site.github.url }}/{{ post.url }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+  <p>subscribe <a href="{{ site.github.url }}/atom.xml">via RSS</a></p>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+</div> 
