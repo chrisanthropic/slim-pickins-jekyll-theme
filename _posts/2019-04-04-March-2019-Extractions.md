@@ -1,4 +1,9 @@
-# Extracting DNA from the first 8 of the March 2019 Sampling  
+---
+layout: post
+title: Extracting DNA from the first 8 of the March 2019 Sampling
+tags: Extraction
+---
+
 
 Using Qiagen DNeasy Blood & Tissue kit and modifications from modifications from [Renshaw et. al]()  
 

@@ -1,4 +1,8 @@
-# Testing MiFish U and E and COI on New Samples
+---
+layout: post
+title: Testing MiFish U and E and COI on New Samples
+tags:  MiFish COI PCR
+---
 
 We have been having trouble getting MiFish to work on any of our samples. When I took samples for testing the new PCR primers I filtered 3 extra liters to use for further tests with these primers.
 
