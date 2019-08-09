@@ -4,20 +4,17 @@ title: Notebook
 permalink: /Notebook/
 ---
 
-<div>
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-        <h2>
-          <a class="post-link" href="{{ site.github.url }}/{{ post.url }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
 
-  <p>subscribe <a href="{{ site.github.url }}/atom.xml">via RSS</a></p>
-
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
 </div>
