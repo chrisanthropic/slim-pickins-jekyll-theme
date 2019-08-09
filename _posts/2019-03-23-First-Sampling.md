@@ -34,4 +34,4 @@ Filtering followed [previous](https://github.com/meschedl/Narragansett_Bay_eDNA/
 Filters were then stored in the -80  
 Sample labels and further information about the locations are [here](https://github.com/meschedl/Narragansett_Bay_eDNA/blob/master/Sampling/March-2019-Sampling.csv)
 
-![locations](/images/sampling-locations.png)
+![locations]({{ site.baseurl}}/images/sampling-locations.png)

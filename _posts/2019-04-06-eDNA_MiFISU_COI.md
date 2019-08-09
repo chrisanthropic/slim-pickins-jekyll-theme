@@ -1,4 +1,7 @@
-# Testing MiFish U and E, and COI on New Samples from IP (India Point) and GSO (Graduate School of Oceanography Beach) April 3-6 2019
+---
+layout: post
+title: Testing MiFish U and E, and COI on New Samples from IP and GSO
+---
 
 Sample | DNA Concentration (µg/ul)
 -------|---------------------------

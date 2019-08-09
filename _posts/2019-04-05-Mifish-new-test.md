@@ -20,6 +20,6 @@ We have been having trouble getting MiFish to work on any of our samples. When I
 **Gel**  
 a 1.5% gel was run with GelGreen for 1 hour at 100V
 
-![gel](/images/04-04-19-gel.jpg)
+![gel]({{ site.baseurl}}/images/04-04-19-gel.jpg)
 
 Only the COI worked for the GSO samples

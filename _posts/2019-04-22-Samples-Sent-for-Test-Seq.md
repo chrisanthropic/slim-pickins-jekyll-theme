@@ -1,4 +1,8 @@
-## Samples sent to the GSC for test sequencing
+---
+layout: post
+title: Samples sent to the GSC for test sequencing
+---
+
 
 |GSC Number| Page |  Original tube # | Sample | Primer |
 |----|----|----|----|-----|

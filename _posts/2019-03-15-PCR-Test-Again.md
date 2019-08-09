@@ -33,8 +33,8 @@ Repeat master mix and strip tube for the second primer set
 
 Samples run on a 1.5% gel once finished for about 1.5 hours
 
-![testgel](/images/IMG_1802.jpeg)
+![testgel]({{ site.baseurl}}/images/IMG_1802.jpeg)
 
 Looks like there is something being amplified, and it does not look like there is contamination, which we had seen before.
 
-After doing these PCRs my samples from GSO beach were almost out, so I want to filter more water and try it on them. 
+After doing these PCRs my samples from GSO beach were almost out, so I want to filter more water and try it on them.
