@@ -56,14 +56,14 @@ I tested 14 samples and 2 negatives
 **Gel # 1**
 a 1% gel was run with GelGreen for 1 hour at 110V
 
-![gel](/images/April_3_MFU_65_Gel1.png)
+![gel]({{site.baseurl}}/images/April_3_MFU_65_Gel1.png)
 
 Only the GSO-1 worked for the GSO samples. Its probable that I use DNA template in excess (1 µl)
 for the IPT samples.
 
 **Gel # 2**
 
-![gel](/images/April3_MFU_65_Gel2.png)
+![gel]({{site.baseurl}}/images/April3_MFU_65_Gel2.png)
 
 Only the GSO-2 doesn't worked for the GSO samples and K1 works very well but with the presence os two bands.
 
@@ -85,14 +85,14 @@ I tested 14 samples and 2 negatives
 **Gel # 1**
 a 1% gel was run with GelGreen for 50 min at 110V
 
-![gel](/images/April3_COI_Gel1.png)
+![gel]({{site.baseurl}}/images/April3_COI_Gel1.png)
 
 None of the samples from IPT and GSO amplified. I put DNA template in excess (1.5 µl)
 
 **Gel # 2**
 a 1% gel was run with GelGreen for 50 min at 110V
 
-![gel](/images/April3_COI_Gel2.png)
+![gel]({{site.baseurl}}/images/April3_COI_Gel2.png)
 
 None of the samples from GSO amplified, but K1 sample worked well.
 
@@ -115,6 +115,6 @@ I tested 14 samples and 2 negatives
 **Gel # 1**
 a 1% gel was run with GelGreen for 50 min at 110V
 
-![gel](/images/April6_MiFishU_65C.png)
+![gel]({{site.baseurl}}/images/April6_MiFishU_65C.png)
 
 IPT-3; IPT-6; IPT-5 samples doesn't worked. The rest of the samples (11) works well, but with the presence of a double bands.
