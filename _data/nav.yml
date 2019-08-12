@@ -1,8 +1,11 @@
-- title: "home"
-  href: "/"
+- title: "Home"
+  href: "/eDNA/"
 
 - title: "Notebook"
   href: "/blog/"
+
+- title: "Tags"
+  href: "/tags/"
 
 - title: "Sampling"
   subcategories:

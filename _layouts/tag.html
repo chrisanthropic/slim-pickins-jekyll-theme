@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="h2">Posts tagged with <em>"{{ site.data.tags[page.tag].name }}"</em></h1>
+  </header>
+
+  <article class="post-content">
+    <ol>
+      {% for post in site.tags[page.tag] %}
+      <li>
+        <a class="post-link" href="{{post.url | prepend: site.baseurl}}"><h3 class="post-title mb0">{{post.title}}</h3></a>
+        <p class="post-meta small">{{ post.date | date: site.date_format }}</p>
+        <div class="small">
+          {% include post_tags.html tags-class="small" %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </article>
+</div>
