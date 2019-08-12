@@ -1,0 +1,110 @@
+@mixin mobile-table {
+
+  margin: 0 0 2em 0;
+  display: block;
+
+  /* Force table to not be like tables anymore */
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border-bottom: 3px solid #4ea5c2;
+    padding: .5em 0;
+
+    &.odd {
+      background: #ffffff;
+    }
+    &.even {
+      background: #fbfbfb;
+    }
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding: .5em 0 .5em 50%;
+    white-space: normal;
+    text-align:left;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align:left;
+    font-weight: bold;
+  }
+
+  /* Label the data */
+  td:before { content: attr(data-title); }
+
+  td:last-child {
+    border-bottom: none;
+  }
+}
+
+
+
+table {
+  @include breakpoint($mobile) {
+    @include mobile-table;
+  }
+  @include breakpoint($tablet) {
+
+    background: none;
+
+    thead {
+      border-color: #EAEAEA;
+      border-width: 1px 0;
+      border-style: solid;
+    }
+
+    tbody {
+      tr, tr.odd, tr.even {
+        background: none;
+
+        &:hover {
+          background: #FCFCFC;
+        }
+      }
+    }
+
+    th {
+      color: $primary;
+      background: none;
+      text-transform: uppercase;
+      padding: 1em 4px;
+      font-weight: normal;
+
+      a, a.active {
+        color: $primary;
+      }
+    }
+
+    td {
+      padding: 1.5em 4px;
+      border-color: #EAEAEA;
+      border-width: 1px 0 0 0;
+      border-style: solid;
+    }
+  }
+}
