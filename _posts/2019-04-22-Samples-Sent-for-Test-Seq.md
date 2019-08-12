@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Samples sent to the GSC for test sequencing
+tags:
+- Seq
 ---
 
 

@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Extracting DNA from the first 8 of the March 2019 Sampling
-tags: Extraction
+tags:
+- extraction
 ---
 
 

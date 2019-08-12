@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Testing MiFish U and E, and COI on New Samples from IP and GSO
+tags:
+- PCR
+- MiFish
+- COI
 ---
 
 Sample | DNA Concentration (µg/ul)

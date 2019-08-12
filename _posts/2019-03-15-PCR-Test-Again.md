@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Test MiFish PCRs again
-tags:  MiFish PCR 
+tags:  
+- MiFish
+- PCR 
 ---
 
 ## Testing PCRs again with new primer stocks

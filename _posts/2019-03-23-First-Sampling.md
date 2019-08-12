@@ -1,6 +1,8 @@
 ---
 layout: post
 title: First Sampling Days
+tags:
+- sampling
 ---
 
 ### Sampling on March 22nd 2019
