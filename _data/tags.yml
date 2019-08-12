@@ -1,6 +1,6 @@
 PCR:
   name: PCR
-extraction
+extraction:
   name: extraction
 COI:
   name: COI
