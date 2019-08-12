@@ -34,6 +34,9 @@ gems:
 feed:
   path: atom.xml
 
+plugins:
+  - _tag_gen
+
 # Compress our Css
 #sass:
 #    style: :compressed
