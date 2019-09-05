@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Sample Status
+permalink: "/status"
 ---
 
 Sample status for Winter 2019 sampling [here](https://drive.google.com/open?id=10wIDWTnqAqzKFWYoEz30_ncLrVZ0UP2VJMhxdqW78fc)
