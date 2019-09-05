@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Test eDNA Extractions More Samples
-permalink: /Notebook/2019-02-13-Test-Extractions-2
+permalink: /blog/2019-02-13-Test-Extractions-2
 tags:
 - extraction
 ---
