@@ -12,5 +12,11 @@
     - subtitle: "2019"
       subhref: "/Sampling/2019"
 
+- title: "Primers"
+  href: "/primers"
+
+- title: "Sample-Status"
+  href:: "/status"
+
 - title: "Lab-Website"
   external: "https://www.carlosprada.org/"
