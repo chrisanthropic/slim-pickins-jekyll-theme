@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sample Status
+title: Status
 permalink: "/status"
 ---
 
