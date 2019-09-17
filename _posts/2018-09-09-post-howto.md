@@ -24,19 +24,19 @@ permalink: /blog/2018-09-09-post-howto
 
 **Adding things to the site**
 
-- First create a branch other then the master branch
+- First create a branch other then the master branch  
 ![one]({{ site.baseurl}}/images/first.png)
-- Then in that branch go to the posts folder and click to add a new file
+- Then in that branch go to the posts folder and click to add a new file  
 ![two]({{ site.baseurl}}/images/second.png)
-- Then title your file with the naming convention and .md and copy and paste in your markdown file. Or you could just write it in here
+- Then title your file with the naming convention and .md and copy and paste in your markdown file. Or you could just write it in here  
 ![three]({{ site.baseurl}}/images/third.png)
-- Then click commit changes at the bottom of the page
+- Then click commit changes at the bottom of the page  
 ![four]({{ site.baseurl}}/images/fourth.png)
-- Add an image by going to the image folder, adding a file via upload and commiting that addition
+- Add an image by going to the image folder, adding a file via upload and commiting that addition  
 ![8]({{ site.baseurl}}/images/eigth.png)
-- Then go to the code page for the branch you created, and click new pull request
+- Then go to the code page for the branch you created, and click new pull request  
 ![5]({{ site.baseurl}}/images/fifth.png)
-- **Make sure when you are doing a pull request it goes to my git up repository and not the person who created the website**
+- **Make sure when you are doing a pull request it goes to my git up repository and not the person who created the website**  
 ![6]({{ site.baseurl}}/images/sixth.png)
-- Then write a small message about what you are adding and click create pull request, the rest I should be able to do!
+- Then write a small message about what you are adding and click create pull request, the rest I should be able to do!  
 ![7]({{ site.baseurl}}/images/seventh.png)
