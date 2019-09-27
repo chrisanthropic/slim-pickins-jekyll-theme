@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chord_Ceph_Tag_B
+title: Chord_Ceph_Tag_B page 14
 permalink: /blog/2019-05-10-Chord_Ceph_Tag_B
 tags:
 - Chord_Ceph_Tag_B
@@ -20,10 +20,10 @@ For the master mix:
 7. I tested 14 samples and 2 negative 
 8. 52 C
 
-![image](/eDNA/images/Page14_Co_Ce_TB.png)
+![image]({{ site.baseurl}}/images/Page14_Co_Ce_TB.png)
 
 ### Gel 1: 1% gel was run with GelGreen for 1.5 hours at 110V
 
 ### GSO and IPT samples doesn't amplified well in this PCR work. Some with a double bands.
 
-![image](/eDNA/images/Chord_Ceph_TagB_Page14.png)
+![image]({{ site.baseurl}}/images/Chord_Ceph_TagB_Page14.png)
