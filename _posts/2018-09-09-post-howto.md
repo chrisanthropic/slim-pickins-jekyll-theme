@@ -28,7 +28,11 @@ permalink: /blog/2018-09-09-post-howto
 
 ![one]({{ site.baseurl}}/images/first.png)  
 
-- Then in that branch go to the posts folder and click to add a new file
+- Then in that branch go to the posts folder
+
+![9]({{ site.baseurl}}/images/nineth.png) 
+
+- Then click to add a new file
 
 ![two]({{ site.baseurl}}/images/second.png)  
 
