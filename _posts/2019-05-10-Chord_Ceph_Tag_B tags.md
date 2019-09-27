@@ -7,7 +7,7 @@ tags:
 - PCR
 ---
 
-## Testing Chord_Ceph_Tag_B with the project samples. Pag # 12.
+## Testing Chord_Ceph_Tag_B with the project samples. Pag # 14.
 
 For the master mix:
 
