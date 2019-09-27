@@ -24,6 +24,6 @@ For the master mix:
 
 ### Gel 1: 1% gel was run with GelGreen for 1.5 hours at 110V
 
-### all GSO samples amplified well and IPT samples doesn't work in this PCR work
+### All GSO samples amplified, but the IPT samples doesn't work in this PCR
 
 ![image](/eDNA/images/Chord_Ceph_TagB_Page 12.png)
