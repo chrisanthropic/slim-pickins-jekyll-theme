@@ -22,7 +22,7 @@ For the master mix:
 
 ![image](/eDNA/images/Page12_Co_Cep.png)
 
-### Gel 1 and 2: 1% gel was run with GelGreen for 1.5 hours at 110V
+### Gel 1: 1% gel was run with GelGreen for 1.5 hours at 110V
 
 ### all GSO samples amplified well and IPT samples doesn't work in this PCR work
 
