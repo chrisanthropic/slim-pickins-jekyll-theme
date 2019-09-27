@@ -26,4 +26,4 @@ For the master mix:
 
 ### All GSO samples amplified, but the IPT samples doesn't work in this PCR
 
-![image]({{ site.baseurl}}/images/Chord_Ceph_TagB_Page 12.png)
+![image]({{ site.baseurl}}/images/Chord_Ceph_TagB_Page12.png)
