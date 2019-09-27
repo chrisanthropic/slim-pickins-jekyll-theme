@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Chord_Ceph_Tag_B
+title: Chord_Ceph_Tag_B page 12
 permalink: /blog/2019-05-8-Chord_Ceph_Tag_B_2
 tags:
 - Chord_Ceph_Tag_B
