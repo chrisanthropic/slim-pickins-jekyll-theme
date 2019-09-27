@@ -20,10 +20,10 @@ For the master mix:
 7. I tested 14 samples and 2 negative 
 8. 52 C using CHO52long program
 
-![image](/eDNA/images/Page29_Co_Ce_TB.png)
+![image]({{site.baseurl}}/images/Page29_Co_Ce_TB.png)
 
 ### Gel: 1% gel was run with GelGreen for 1.5 hours at 110V
 
 ### The samples doesn't amplified well in this PCR. Some of them with double bands.
 
-![image](/eDNA/images/Chord/Ceph_TagB_Page 29.png)
+![image]({{site.baseurl}}/images/Chord_Ceph_TagB_Page29.png)
