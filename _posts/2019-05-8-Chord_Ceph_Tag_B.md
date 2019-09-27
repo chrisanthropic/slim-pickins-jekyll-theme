@@ -22,7 +22,7 @@ For the master mix:
 
 ![image](/eDNA/images/Page11_Co_Ce_TB.png)
 
-### Gel 1 and 2: 1% gel was run with GelGreen for 1.5 hours at 110V
+### Gel 1: 1% gel was run with GelGreen for 1.5 hours at 110V
 
 ### This PCR does not work
 
