@@ -20,10 +20,10 @@ For the master mix:
 7. I tested 14 samples and 2 negative 
 8. 52 C
 
-![image](/eDNA/images/Page12_Co_Cep.png)
+![image]({{ site.baseurl}}/images/Page12_Co_Cep.png)
 
 ### Gel 1: 1% gel was run with GelGreen for 1.5 hours at 110V
 
 ### All GSO samples amplified, but the IPT samples doesn't work in this PCR
 
-![image](/eDNA/images/Chord_Ceph_TagB_Page 12.png)
+![image]({{ site.baseurl}}/images/Chord_Ceph_TagB_Page 12.png)
