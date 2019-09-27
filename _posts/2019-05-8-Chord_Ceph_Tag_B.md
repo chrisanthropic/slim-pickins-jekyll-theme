@@ -26,4 +26,4 @@ For the master mix:
 
 ### This PCR does not work
 
-![image](/eDNA/images/Chord_Ceph_TagB_Page 11)
+![image](/eDNA/images/Chord_Ceph_TagB_Page 11.png)
